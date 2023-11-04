@@ -1,0 +1,8 @@
+sv work "glbl.v"
+sv xil_defaultlib "multip_2num.v"
+sv xil_defaultlib "AESL_axi_slave_control.v"
+sv xil_defaultlib "multip_2num_mul_32s_32s_32_2_1.v"
+sv xil_defaultlib "multip_2num.autotb.v"
+sv xil_defaultlib "multip_2num_control_s_axi.v"
+sv xil_defaultlib "dataflow_monitor.sv"
+

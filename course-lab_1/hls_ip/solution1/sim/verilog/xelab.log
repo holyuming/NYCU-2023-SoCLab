@@ -1,0 +1,34 @@
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_multip_2num_top glbl -Oenable_linking_all_libraries -prj multip_2num.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_20 -L floating_point_v7_1_14 --lib ieee_proposed=./ieee_proposed -s multip_2num -debug wave 
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/course-lab_1/hls_ip/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/course-lab_1/hls_ip/solution1/sim/verilog/multip_2num.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multip_2num
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/course-lab_1/hls_ip/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/course-lab_1/hls_ip/solution1/sim/verilog/multip_2num_mul_32s_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multip_2num_mul_32s_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/course-lab_1/hls_ip/solution1/sim/verilog/multip_2num.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_multip_2num_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/course-lab_1/hls_ip/solution1/sim/verilog/multip_2num_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multip_2num_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/course-lab_1/hls_ip/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.multip_2num_control_s_axi
+Compiling module xil_defaultlib.multip_2num_mul_32s_32s_32_2_1(N...
+Compiling module xil_defaultlib.multip_2num
+Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_multip_2num_top
+Compiling module work.glbl
+Built simulation snapshot multip_2num
