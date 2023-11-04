@@ -1,0 +1,590 @@
+
+*** Running vivado
+    with args -log design_1_axi_smc_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_smc_0.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_axi_smc_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2859.520 ; gain = 0.023 ; free physical = 3659 ; free virtual = 6962
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/course-lab_2/axi_master_hls'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_axi_smc_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7558
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/sc_util_v1_0_vl_rfs.sv:2831]
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/sc_util_v1_0_vl_rfs.sv:2899]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 3123.348 ; gain = 215.828 ; free physical = 2384 ; free virtual = 5691
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:9]
+INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_5Y9LOC' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:763]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_one_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/synth/bd_afc3_one_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_one_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/synth/bd_afc3_one_0.v:53]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_psr_aclk_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:74]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-3491] module 'SRL16' declared at '/tools/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:105982' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [/tools/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:105982]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [/tools/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:105982]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_psr_aclk_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:74]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_afc3_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:798]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_afc3_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:798]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_afc3_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:798]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_afc3_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:798]
+WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_afc3_psr_aclk_0' has 10 connections declared, but only 6 given [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:798]
+INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_5Y9LOC' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:763]
+INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_1TZX5BB' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:807]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_m00e_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/synth/bd_afc3_m00e_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1174]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1174]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_m00e_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/synth/bd_afc3_m00e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_1TZX5BB' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:807]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_m00s2a_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/synth/bd_afc3_m00s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_m00s2a_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/synth/bd_afc3_m00s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00a2s_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/synth/bd_afc3_s00a2s_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00a2s_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/synth/bd_afc3_s00a2s_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_USCCV8' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1178]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00mmu_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/synth/bd_afc3_s00mmu_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00mmu_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/synth/bd_afc3_s00mmu_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00sic_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/synth/bd_afc3_s00sic_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00sic_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/synth/bd_afc3_s00sic_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00tr_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/synth/bd_afc3_s00tr_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00tr_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/synth/bd_afc3_s00tr_0.sv:53]
+WARNING: [Synth 8-7071] port 'm_axi_awburst' of module 'bd_afc3_s00tr_0' is unconnected for instance 's00_transaction_regulator' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1706]
+WARNING: [Synth 8-7071] port 'm_axi_arburst' of module 'bd_afc3_s00tr_0' is unconnected for instance 's00_transaction_regulator' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1706]
+WARNING: [Synth 8-7023] instance 's00_transaction_regulator' of module 'bd_afc3_s00tr_0' has 82 connections declared, but only 80 given [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1706]
+INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_USCCV8' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1178]
+INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_Y7M43I' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1789]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_sarn_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/synth/bd_afc3_sarn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8476]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8476]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_sarn_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/synth/bd_afc3_sarn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_sawn_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/synth/bd_afc3_sawn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_sawn_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/synth/bd_afc3_sawn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_sbn_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/synth/bd_afc3_sbn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized0' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8476]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized0' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8476]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_sbn_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/synth/bd_afc3_sbn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_srn_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/synth/bd_afc3_srn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8476]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized1' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8476]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_srn_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/synth/bd_afc3_srn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_swn_0' [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/synth/bd_afc3_swn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized2' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8476]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized2' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized2' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized2' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8476]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_swn_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/synth/bd_afc3_swn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_Y7M43I' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1789]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (0#1) [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:53]
+WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_5Y9LOC does not have driver. [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:779]
+WARNING: [Synth 8-7129] Port din[0] in module sc_util_v1_0_4_onehot_to_binary is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module sc_util_v1_0_4_pipeline__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module sc_util_v1_0_4_pipeline__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset in module sc_util_v1_0_4_pipeline__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[159] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[158] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[157] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[156] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[155] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[154] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[153] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[152] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[151] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[150] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[149] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[148] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[147] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[146] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[145] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[144] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[143] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[142] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[141] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[140] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[139] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[138] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[137] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[136] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[135] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[134] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[133] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[132] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[131] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[130] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[129] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[128] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[127] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[126] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[125] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[124] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[123] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[122] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[121] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[120] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[119] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[118] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[117] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[116] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[115] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[114] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[113] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[112] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[111] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[110] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[109] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[108] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[107] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[106] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[105] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[104] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[103] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[102] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[101] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[100] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[99] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[98] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[97] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[96] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[95] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[94] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[93] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[92] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[91] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[90] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[89] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[88] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[87] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[86] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[85] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[84] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[83] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[82] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[81] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[80] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[79] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[78] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[77] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[76] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[75] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[74] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[73] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[72] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[71] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[70] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[69] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[68] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[67] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[66] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[65] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_sc_payld[64] in module sc_node_v1_0_14_ingress__parameterized3 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 3275.160 ; gain = 367.641 ; free physical = 2050 ; free virtual = 5364
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 3290.004 ; gain = 382.484 ; free physical = 2041 ; free virtual = 5356
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 3290.004 ; gain = 382.484 ; free physical = 2041 ; free virtual = 5356
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3303.941 ; gain = 0.000 ; free physical = 1702 ; free virtual = 5017
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3505.480 ; gain = 23.781 ; free physical = 2698 ; free virtual = 6008
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_axi_smc_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_axi_smc_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 19 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3505.480 ; gain = 0.000 ; free physical = 2543 ; free virtual = 5853
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 13 instances were transformed.
+  FDR => FDRE: 12 instances
+  SRL16 => SRL16E: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.56 . Memory (MB): peak = 3508.449 ; gain = 2.969 ; free physical = 2473 ; free virtual = 5783
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:03 ; elapsed = 00:01:13 . Memory (MB): peak = 3508.449 ; gain = 600.930 ; free physical = 3593 ; free virtual = 6903
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:03 ; elapsed = 00:01:13 . Memory (MB): peak = 3508.449 ; gain = 600.930 ; free physical = 3593 ; free virtual = 6903
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc, line 71).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_exit_pipeline/m00_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_entry_pipeline/s00_mmu/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_entry_pipeline/s00_si_converter/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_entry_pipeline/s00_transaction_regulator/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_b_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_r_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:14 . Memory (MB): peak = 3508.449 ; gain = 600.930 ; free physical = 3593 ; free virtual = 6902
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:08 ; elapsed = 00:01:19 . Memory (MB): peak = 3508.449 ; gain = 600.930 ; free physical = 3543 ; free virtual = 6856
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    7 Bit       Adders := 4     
+	   2 Input    6 Bit       Adders := 33    
+	   2 Input    5 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 8     
+	   2 Input    2 Bit       Adders := 3     
+	   3 Input    2 Bit       Adders := 1     
+	   3 Input    1 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 49    
++---Registers : 
+	             2178 Bit    Registers := 4     
+	              188 Bit    Registers := 2     
+	              178 Bit    Registers := 1     
+	              166 Bit    Registers := 1     
+	               47 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 17    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 18    
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 21    
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 155   
++---Muxes : 
+	   2 Input 2178 Bit        Muxes := 2     
+	   2 Input   47 Bit        Muxes := 1     
+	   2 Input   33 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 12    
+	   2 Input    6 Bit        Muxes := 6     
+	   2 Input    5 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 3     
+	  11 Input    3 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 32    
+	   2 Input    1 Bit        Muxes := 62    
+	   6 Input    1 Bit        Muxes := 23    
+	  12 Input    1 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 4     
+	  10 Input    1 Bit        Muxes := 6     
+	   7 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module bd_afc3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module bd_afc3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module bd_afc3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module bd_afc3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module bd_afc3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module bd_afc3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module bd_afc3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module bd_afc3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/FDRE_inst) is unused and will be removed from module bd_afc3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module bd_afc3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module bd_afc3.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module bd_afc3.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:35 . Memory (MB): peak = 3508.449 ; gain = 600.930 ; free physical = 2612 ; free virtual = 5946
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+----------------+
+|Module Name                                                                                                                                                               | RTL Object                       | Inference      | Size (Depth x Width) | Primitives     | 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+----------------+
+|xpm_memory_sdpram:/xpm_memory_base_inst                                                                                                                                   | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 188             | RAM32M16 x 14  | 
+|xpm_memory_sdpram:/xpm_memory_base_inst                                                                                                                                   | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 188             | RAM32M16 x 14  | 
+|inst/\s00_nodes/s00_b_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 23              | RAM32M16 x 2   | 
+|inst/\s00_nodes/s00_r_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 166             | RAM32M16 x 12  | 
+|inst/\s00_nodes/s00_w_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 178             | RAM32M16 x 13  | 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:38 ; elapsed = 00:01:55 . Memory (MB): peak = 3710.059 ; gain = 802.539 ; free physical = 1630 ; free virtual = 4964
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:01:58 . Memory (MB): peak = 3746.105 ; gain = 838.586 ; free physical = 1577 ; free virtual = 4910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+----------------+
+|Module Name                                                                                                                                                               | RTL Object                       | Inference      | Size (Depth x Width) | Primitives     | 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+----------------+
+|xpm_memory_sdpram:/xpm_memory_base_inst                                                                                                                                   | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 188             | RAM32M16 x 14  | 
+|xpm_memory_sdpram:/xpm_memory_base_inst                                                                                                                                   | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 188             | RAM32M16 x 14  | 
+|inst/\s00_nodes/s00_b_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 23              | RAM32M16 x 2   | 
+|inst/\s00_nodes/s00_r_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 166             | RAM32M16 x 12  | 
+|inst/\s00_nodes/s00_w_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 178             | RAM32M16 x 13  | 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:42 ; elapsed = 00:02:00 . Memory (MB): peak = 3754.113 ; gain = 846.594 ; free physical = 1761 ; free virtual = 5095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:53 ; elapsed = 00:02:11 . Memory (MB): peak = 3754.113 ; gain = 846.594 ; free physical = 1713 ; free virtual = 5047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:53 ; elapsed = 00:02:11 . Memory (MB): peak = 3754.113 ; gain = 846.594 ; free physical = 1713 ; free virtual = 5047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:53 ; elapsed = 00:02:12 . Memory (MB): peak = 3754.113 ; gain = 846.594 ; free physical = 1713 ; free virtual = 5047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:53 ; elapsed = 00:02:12 . Memory (MB): peak = 3754.113 ; gain = 846.594 ; free physical = 1713 ; free virtual = 5047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:54 ; elapsed = 00:02:12 . Memory (MB): peak = 3754.113 ; gain = 846.594 ; free physical = 1713 ; free virtual = 5047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:54 ; elapsed = 00:02:12 . Memory (MB): peak = 3754.113 ; gain = 846.594 ; free physical = 1713 ; free virtual = 5047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+---------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name      | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+---------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | shift_reg_reg | 16     | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__94    | shift_reg_reg | 16     | 1          | 1      | 0       | 0      | 0      | 0      | 
++------------+---------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |    72|
+|2     |LUT2     |    61|
+|3     |LUT3     |   264|
+|4     |LUT4     |    95|
+|5     |LUT5     |   115|
+|6     |LUT6     |   177|
+|7     |RAM32M16 |    40|
+|8     |SRL16    |     1|
+|9     |SRL16E   |    14|
+|10    |FDCE     |    42|
+|11    |FDR      |     4|
+|12    |FDRE     |  1173|
+|13    |FDSE     |    47|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:54 ; elapsed = 00:02:12 . Memory (MB): peak = 3754.113 ; gain = 846.594 ; free physical = 1713 ; free virtual = 5047
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14272 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:21 ; elapsed = 00:01:35 . Memory (MB): peak = 3754.113 ; gain = 628.148 ; free physical = 1748 ; free virtual = 5083
+Synthesis Optimization Complete : Time (s): cpu = 00:01:54 ; elapsed = 00:02:12 . Memory (MB): peak = 3754.121 ; gain = 846.594 ; free physical = 1748 ; free virtual = 5083
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.47 . Memory (MB): peak = 3754.121 ; gain = 0.000 ; free physical = 1826 ; free virtual = 5160
+INFO: [Netlist 29-17] Analyzing 45 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3800.738 ; gain = 0.000 ; free physical = 1750 ; free virtual = 5084
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 45 instances were transformed.
+  FDR => FDRE: 4 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 40 instances
+  SRL16 => SRL16E: 1 instance 
+
+Synth Design complete, checksum: 8f8498b3
+INFO: [Common 17-83] Releasing license: Synthesis
+110 Infos, 130 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:13 ; elapsed = 00:02:29 . Memory (MB): peak = 3800.738 ; gain = 941.219 ; free physical = 1941 ; free virtual = 5275
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_smc_0, cache-ID = 13350c6c68db3cef
+INFO: [Coretcl 2-1174] Renamed 119 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/course-lab_2/axi_master_vvd/axi_master_vvd.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_smc_0_utilization_synth.rpt -pb design_1_axi_smc_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 27 04:43:03 2023...

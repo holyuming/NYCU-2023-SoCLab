@@ -1,0 +1,359 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2857.547 ; gain = 0.023 ; free physical = 6139 ; free virtual = 9904
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/course-lab_2/axi_stream_hls'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2857.547 ; gain = 0.000 ; free physical = 6089 ; free virtual = 9855
+Command: synth_design -top design_1_wrapper -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6039
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3147.375 ; gain = 216.828 ; free physical = 4819 ; free virtual = 8585
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_axi_dma_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_axi_dma_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_in_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:215]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_in_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:215]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_in_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:215]
+WARNING: [Synth 8-7023] instance 'axi_dma_in_0' of module 'design_1_axi_dma_0_0' has 40 connections declared, but only 37 given [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:215]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_1' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_axi_dma_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_1' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_axi_dma_0_1_stub.v:5]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_0_1' is unconnected for instance 'axi_dma_out_1' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:253]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_dma_0_1' is unconnected for instance 'axi_dma_out_1' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:253]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_1' is unconnected for instance 'axi_dma_out_1' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:253]
+WARNING: [Synth 8-7023] instance 'axi_dma_out_1' of module 'design_1_axi_dma_0_1' has 43 connections declared, but only 40 given [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:253]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_axi_smc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_axi_smc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_fir_n11_strm_0_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_fir_n11_strm_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_fir_n11_strm_0_0' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_fir_n11_strm_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_fir_n11_strm_0_0' is unconnected for instance 'fir_n11_strm_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:363]
+WARNING: [Synth 8-7071] port 'pstrmOutput_TDEST' of module 'design_1_fir_n11_strm_0_0' is unconnected for instance 'fir_n11_strm_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:363]
+WARNING: [Synth 8-7071] port 'pstrmOutput_TSTRB' of module 'design_1_fir_n11_strm_0_0' is unconnected for instance 'fir_n11_strm_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:363]
+WARNING: [Synth 8-7071] port 'pstrmOutput_TUSER' of module 'design_1_fir_n11_strm_0_0' is unconnected for instance 'fir_n11_strm_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:363]
+WARNING: [Synth 8-7071] port 'pstrmOutput_TID' of module 'design_1_fir_n11_strm_0_0' is unconnected for instance 'fir_n11_strm_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:363]
+WARNING: [Synth 8-7023] instance 'fir_n11_strm_0' of module 'design_1_fir_n11_strm_0_0' has 38 connections declared, but only 33 given [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:363]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:660]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:1547]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:1547]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:1672]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:1672]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_P3UMW5' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:1797]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_P3UMW5' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:1797]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:1929]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:1929]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_KGUFR9' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:2339]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_auto_ds_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_auto_ds_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_KGUFR9' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:2339]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_xbar_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:1506]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:1506]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:1506]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:660]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_99M_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_rst_ps8_0_99M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_99M_0' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_rst_ps8_0_99M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_99M' of module 'design_1_rst_ps8_0_99M_0' has 10 connections declared, but only 6 given [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:533]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/.Xil/Vivado-5978-ubuntu2004/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:540]
+WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:540]
+WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:540]
+WARNING: [Synth 8-7071] port 'maxigp1_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:540]
+WARNING: [Synth 8-7071] port 'saxigp2_bid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:540]
+WARNING: [Synth 8-7071] port 'saxigp2_rid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:540]
+WARNING: [Synth 8-7071] port 'pl_clk1' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:540]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 124 connections declared, but only 117 given [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:540]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/synth/design_1.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-7129] Port M_ACLK in module s01_couplers_imp_KGUFR9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s01_couplers_imp_KGUFR9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_1A7ZMW4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1A7ZMW4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_P3UMW5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m02_couplers_imp_P3UMW5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m02_couplers_imp_P3UMW5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m02_couplers_imp_P3UMW5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_1D3SAH3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_1D3SAH3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m01_couplers_imp_1D3SAH3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m01_couplers_imp_1D3SAH3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_QJIMLI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_QJIMLI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_QJIMLI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_QJIMLI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3217.281 ; gain = 286.734 ; free physical = 4857 ; free virtual = 8624
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3235.094 ; gain = 304.547 ; free physical = 4857 ; free virtual = 8624
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3235.094 ; gain = 304.547 ; free physical = 4857 ; free virtual = 8624
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3235.094 ; gain = 0.000 ; free physical = 4857 ; free virtual = 8624
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+create_clock: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3265.945 ; gain = 0.000 ; free physical = 4795 ; free virtual = 8562
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_fir_n11_strm_0_0/design_1_fir_n11_strm_0_0/design_1_fir_n11_strm_0_0_in_context.xdc] for cell 'design_1_i/fir_n11_strm_0'
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_fir_n11_strm_0_0/design_1_fir_n11_strm_0_0/design_1_fir_n11_strm_0_0_in_context.xdc] for cell 'design_1_i/fir_n11_strm_0'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'design_1_i/axi_dma_in_0'
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'design_1_i/axi_dma_in_0'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_1/design_1_axi_dma_0_1/design_1_axi_dma_0_1_in_context.xdc] for cell 'design_1_i/axi_dma_out_1'
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_1/design_1_axi_dma_0_1/design_1_axi_dma_0_1_in_context.xdc] for cell 'design_1_i/axi_dma_out_1'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds'
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc'
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_99M'
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_99M'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0/design_1_axi_smc_0_in_context.xdc] for cell 'design_1_i/axi_smc'
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0/design_1_axi_smc_0_in_context.xdc] for cell 'design_1_i/axi_smc'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3265.945 ; gain = 0.000 ; free physical = 4795 ; free virtual = 8562
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3265.945 ; gain = 0.000 ; free physical = 4795 ; free virtual = 8562
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 3265.945 ; gain = 335.398 ; free physical = 4838 ; free virtual = 8605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 3265.945 ; gain = 335.398 ; free physical = 4838 ; free virtual = 8605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/fir_n11_strm_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_dma_in_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_dma_out_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps8_0_99M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 3265.945 ; gain = 335.398 ; free physical = 4838 ; free virtual = 8605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 3265.945 ; gain = 335.398 ; free physical = 4838 ; free virtual = 8605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port M00_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 3265.945 ; gain = 335.398 ; free physical = 4837 ; free virtual = 8609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 3700.078 ; gain = 769.531 ; free physical = 4270 ; free virtual = 8042
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 3700.078 ; gain = 769.531 ; free physical = 4270 ; free virtual = 8042
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 3720.117 ; gain = 789.570 ; free physical = 4252 ; free virtual = 8024
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 3726.055 ; gain = 795.508 ; free physical = 4252 ; free virtual = 8024
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 3726.055 ; gain = 795.508 ; free physical = 4252 ; free virtual = 8024
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 3726.055 ; gain = 795.508 ; free physical = 4252 ; free virtual = 8024
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 3726.055 ; gain = 795.508 ; free physical = 4252 ; free virtual = 8024
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 3726.055 ; gain = 795.508 ; free physical = 4252 ; free virtual = 8024
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 3726.055 ; gain = 795.508 ; free physical = 4252 ; free virtual = 8024
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------+----------+
+|      |BlackBox name                |Instances |
++------+-----------------------------+----------+
+|1     |design_1_xbar_0              |         1|
+|2     |design_1_auto_ds_0           |         1|
+|3     |design_1_auto_pc_0           |         1|
+|4     |design_1_auto_ds_1           |         1|
+|5     |design_1_auto_pc_1           |         1|
+|6     |design_1_axi_dma_0_0         |         1|
+|7     |design_1_axi_dma_0_1         |         1|
+|8     |design_1_axi_smc_0           |         1|
+|9     |design_1_fir_n11_strm_0_0    |         1|
+|10    |design_1_rst_ps8_0_99M_0     |         1|
+|11    |design_1_zynq_ultra_ps_e_0_0 |         1|
++------+-----------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |design_1_auto_ds           |     2|
+|3     |design_1_auto_pc           |     2|
+|5     |design_1_axi_dma_0         |     2|
+|7     |design_1_axi_smc           |     1|
+|8     |design_1_fir_n11_strm_0    |     1|
+|9     |design_1_rst_ps8_0_99M     |     1|
+|10    |design_1_xbar              |     1|
+|11    |design_1_zynq_ultra_ps_e_0 |     1|
++------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 3726.055 ; gain = 795.508 ; free physical = 4252 ; free virtual = 8024
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 3726.055 ; gain = 764.656 ; free physical = 4283 ; free virtual = 8055
+Synthesis Optimization Complete : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 3726.062 ; gain = 795.508 ; free physical = 4283 ; free virtual = 8055
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3726.062 ; gain = 0.000 ; free physical = 4386 ; free virtual = 8159
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3765.711 ; gain = 0.000 ; free physical = 4330 ; free virtual = 8102
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: ca6dbd69
+INFO: [Common 17-83] Releasing license: Synthesis
+54 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:26 ; elapsed = 00:01:25 . Memory (MB): peak = 3779.648 ; gain = 922.102 ; free physical = 4507 ; free virtual = 8280
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 30 03:11:56 2023...

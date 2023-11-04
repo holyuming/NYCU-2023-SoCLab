@@ -1,0 +1,781 @@
+
+*** Running vivado
+    with args -log design_1_fir_n11_strm_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_fir_n11_strm_0_0.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_fir_n11_strm_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2856.547 ; gain = 0.023 ; free physical = 3995 ; free virtual = 7745
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/course-lab_2/axi_stream_hls'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_fir_n11_strm_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5027
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 3108.375 ; gain = 216.828 ; free physical = 2468 ; free virtual = 6219
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_fir_n11_strm_0_0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_fir_n11_strm_0_0/synth/design_1_fir_n11_strm_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'fir_n11_strm' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm.v:10]
+INFO: [Synth 8-6157] synthesizing module 'fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP.v:10]
+INFO: [Synth 8-6157] synthesizing module 'fir_n11_strm_mul_32s_32s_32_1_1' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_mul_32s_32s_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'fir_n11_strm_mul_32s_32s_32_1_1' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_mul_32s_32s_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'fir_n11_strm_flow_control_loop_pipe_sequential_init' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'fir_n11_strm_flow_control_loop_pipe_sequential_init' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP.v:10]
+INFO: [Synth 8-6157] synthesizing module 'fir_n11_strm_control_s_axi' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'fir_n11_strm_control_s_axi_ram' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_control_s_axi.v:470]
+INFO: [Synth 8-6155] done synthesizing module 'fir_n11_strm_control_s_axi_ram' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_control_s_axi.v:470]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_control_s_axi.v:240]
+INFO: [Synth 8-6155] done synthesizing module 'fir_n11_strm_control_s_axi' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'fir_n11_strm_regslice_both' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'fir_n11_strm_regslice_both' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'fir_n11_strm_regslice_both__parameterized0' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'fir_n11_strm_regslice_both__parameterized0' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'fir_n11_strm_regslice_both__parameterized1' [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'fir_n11_strm_regslice_both__parameterized1' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'fir_n11_strm' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_fir_n11_strm_0_0' (0#1) [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_fir_n11_strm_0_0/synth/design_1_fir_n11_strm_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ipshared/c4f9/hdl/verilog/fir_n11_strm_control_s_axi.v:304]
+WARNING: [Synth 8-7129] Port we0[3] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[2] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[1] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[0] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[31] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[30] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[29] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[28] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[27] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[26] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[25] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[24] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[23] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[22] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[21] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[20] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[19] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[18] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[17] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[16] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[15] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[14] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[13] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[12] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[11] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[10] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[9] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[8] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[7] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[6] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[5] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[4] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[3] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[2] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[1] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[0] in module fir_n11_strm_control_s_axi_ram is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 3180.281 ; gain = 288.734 ; free physical = 2648 ; free virtual = 6400
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 3198.094 ; gain = 306.547 ; free physical = 2637 ; free virtual = 6388
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 3198.094 ; gain = 306.547 ; free physical = 2637 ; free virtual = 6388
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3198.094 ; gain = 0.000 ; free physical = 2632 ; free virtual = 6383
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_fir_n11_strm_0_0/constraints/fir_n11_strm_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 3320.758 ; gain = 0.000 ; free physical = 4397 ; free virtual = 8144
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.gen/sources_1/bd/design_1/ip/design_1_fir_n11_strm_0_0/constraints/fir_n11_strm_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/design_1_fir_n11_strm_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/design_1_fir_n11_strm_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3320.758 ; gain = 0.000 ; free physical = 4396 ; free virtual = 8143
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3320.758 ; gain = 0.000 ; free physical = 4394 ; free virtual = 8141
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 3320.758 ; gain = 429.211 ; free physical = 4368 ; free virtual = 8114
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 3320.758 ; gain = 429.211 ; free physical = 4368 ; free virtual = 8114
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/design_1_fir_n11_strm_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 3320.758 ; gain = 429.211 ; free physical = 4368 ; free virtual = 8114
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'fir_n11_strm_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'fir_n11_strm_control_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'fir_n11_strm_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'fir_n11_strm_control_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 3320.758 ; gain = 429.211 ; free physical = 4359 ; free virtual = 8107
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
+	   3 Input   32 Bit       Adders := 1     
+	   7 Input   32 Bit       Adders := 1     
+	   2 Input   31 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 29    
+	               31 Bit    Registers := 3     
+	               11 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 11    
+	                2 Bit    Registers := 15    
+	                1 Bit    Registers := 68    
++---Multipliers : 
+	              32x32  Multipliers := 11    
++---RAMs : 
+	              384 Bit	(12 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 10    
+	   2 Input   11 Bit        Muxes := 1     
+	  12 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	  11 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 11    
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 15    
+	   4 Input    2 Bit        Muxes := 14    
+	   2 Input    1 Bit        Muxes := 36    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U1/dout, operation Mode is: A''*B.
+DSP Report: register mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: register mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: Generating DSP mul_ln35_reg_565_reg, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_8_reg is absorbed into DSP mul_ln35_reg_565_reg.
+DSP Report: register an32ShiftReg_9_reg is absorbed into DSP mul_ln35_reg_565_reg.
+DSP Report: register mul_ln35_reg_565_reg is absorbed into DSP mul_ln35_reg_565_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_ln35_reg_565_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_ln35_reg_565_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U1/dout, operation Mode is: A*B''.
+DSP Report: register mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: register mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_32s_32s_32_1_1_U1/dout.
+DSP Report: Generating DSP mul_ln35_reg_565_reg, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_8_reg is absorbed into DSP mul_ln35_reg_565_reg.
+DSP Report: register an32ShiftReg_9_reg is absorbed into DSP mul_ln35_reg_565_reg.
+DSP Report: register mul_ln35_reg_565_reg is absorbed into DSP mul_ln35_reg_565_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_ln35_reg_565_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U1/dout is absorbed into DSP mul_ln35_reg_565_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U2/dout, operation Mode is: A''*B.
+DSP Report: register mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: register mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U2/dout, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_7_reg is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: register an32ShiftReg_8_reg is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U2/dout, operation Mode is: A*B''.
+DSP Report: register mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: register mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U2/dout, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_7_reg is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: register an32ShiftReg_8_reg is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U2/dout is absorbed into DSP mul_32s_32s_32_1_1_U2/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U6/dout, operation Mode is: A''*B.
+DSP Report: register mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: register mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: Generating DSP mul_ln35_5_reg_615_reg, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_3_reg is absorbed into DSP mul_ln35_5_reg_615_reg.
+DSP Report: register an32ShiftReg_4_reg is absorbed into DSP mul_ln35_5_reg_615_reg.
+DSP Report: register mul_ln35_5_reg_615_reg is absorbed into DSP mul_ln35_5_reg_615_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_ln35_5_reg_615_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_ln35_5_reg_615_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U6/dout, operation Mode is: A*B''.
+DSP Report: register mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: register mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_32s_32s_32_1_1_U6/dout.
+DSP Report: Generating DSP mul_ln35_5_reg_615_reg, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_3_reg is absorbed into DSP mul_ln35_5_reg_615_reg.
+DSP Report: register an32ShiftReg_4_reg is absorbed into DSP mul_ln35_5_reg_615_reg.
+DSP Report: register mul_ln35_5_reg_615_reg is absorbed into DSP mul_ln35_5_reg_615_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_ln35_5_reg_615_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U6/dout is absorbed into DSP mul_ln35_5_reg_615_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U11/dout, operation Mode is: A2*B.
+DSP Report: register mul_32s_32s_32_1_1_U11/dout is absorbed into DSP mul_32s_32s_32_1_1_U11/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U11/dout is absorbed into DSP mul_32s_32s_32_1_1_U11/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U11/dout is absorbed into DSP mul_32s_32s_32_1_1_U11/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U11/dout, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U11/dout is absorbed into DSP mul_32s_32s_32_1_1_U11/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U11/dout is absorbed into DSP mul_32s_32s_32_1_1_U11/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U11/dout, operation Mode is: A*B2.
+DSP Report: register mul_32s_32s_32_1_1_U11/dout is absorbed into DSP mul_32s_32s_32_1_1_U11/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U11/dout is absorbed into DSP mul_32s_32s_32_1_1_U11/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U11/dout is absorbed into DSP mul_32s_32s_32_1_1_U11/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U11/dout, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mul_32s_32s_32_1_1_U11/dout is absorbed into DSP mul_32s_32s_32_1_1_U11/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U11/dout is absorbed into DSP mul_32s_32s_32_1_1_U11/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U9/dout, operation Mode is: A''*B.
+DSP Report: register mul_32s_32s_32_1_1_U9/dout is absorbed into DSP mul_32s_32s_32_1_1_U9/dout.
+DSP Report: register mul_32s_32s_32_1_1_U9/dout is absorbed into DSP mul_32s_32s_32_1_1_U9/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U9/dout is absorbed into DSP mul_32s_32s_32_1_1_U9/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U9/dout is absorbed into DSP mul_32s_32s_32_1_1_U9/dout.
+DSP Report: Generating DSP mul_ln35_8_reg_645_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register an32ShiftReg_1_reg is absorbed into DSP mul_ln35_8_reg_645_reg.
+DSP Report: register mul_ln35_8_reg_645_reg is absorbed into DSP mul_ln35_8_reg_645_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U9/dout is absorbed into DSP mul_ln35_8_reg_645_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U9/dout is absorbed into DSP mul_ln35_8_reg_645_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U9/dout, operation Mode is: A*B''.
+DSP Report: register mul_32s_32s_32_1_1_U9/dout is absorbed into DSP mul_32s_32s_32_1_1_U9/dout.
+DSP Report: register mul_32s_32s_32_1_1_U9/dout is absorbed into DSP mul_32s_32s_32_1_1_U9/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U9/dout is absorbed into DSP mul_32s_32s_32_1_1_U9/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U9/dout is absorbed into DSP mul_32s_32s_32_1_1_U9/dout.
+DSP Report: Generating DSP mul_ln35_8_reg_645_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register an32ShiftReg_1_reg is absorbed into DSP mul_ln35_8_reg_645_reg.
+DSP Report: register mul_ln35_8_reg_645_reg is absorbed into DSP mul_ln35_8_reg_645_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U9/dout is absorbed into DSP mul_ln35_8_reg_645_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U9/dout is absorbed into DSP mul_ln35_8_reg_645_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U8/dout, operation Mode is: A''*B.
+DSP Report: register mul_32s_32s_32_1_1_U8/dout is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: register mul_32s_32s_32_1_1_U8/dout is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U8/dout is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U8/dout is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U8/dout, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_1_reg is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: register an32ShiftReg_2_reg is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U8/dout is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U8/dout is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U8/dout, operation Mode is: A*B''.
+DSP Report: register mul_32s_32s_32_1_1_U8/dout is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: register mul_32s_32s_32_1_1_U8/dout is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U8/dout is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U8/dout is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U8/dout, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_1_reg is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: register an32ShiftReg_2_reg is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U8/dout is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U8/dout is absorbed into DSP mul_32s_32s_32_1_1_U8/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U7/dout, operation Mode is: A''*B.
+DSP Report: register mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_32s_32s_32_1_1_U7/dout.
+DSP Report: register mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_32s_32s_32_1_1_U7/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_32s_32s_32_1_1_U7/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_32s_32s_32_1_1_U7/dout.
+DSP Report: Generating DSP mul_ln35_6_reg_625_reg, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_2_reg is absorbed into DSP mul_ln35_6_reg_625_reg.
+DSP Report: register an32ShiftReg_3_reg is absorbed into DSP mul_ln35_6_reg_625_reg.
+DSP Report: register mul_ln35_6_reg_625_reg is absorbed into DSP mul_ln35_6_reg_625_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_ln35_6_reg_625_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_ln35_6_reg_625_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U7/dout, operation Mode is: A*B''.
+DSP Report: register mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_32s_32s_32_1_1_U7/dout.
+DSP Report: register mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_32s_32s_32_1_1_U7/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_32s_32s_32_1_1_U7/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_32s_32s_32_1_1_U7/dout.
+DSP Report: Generating DSP mul_ln35_6_reg_625_reg, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_2_reg is absorbed into DSP mul_ln35_6_reg_625_reg.
+DSP Report: register an32ShiftReg_3_reg is absorbed into DSP mul_ln35_6_reg_625_reg.
+DSP Report: register mul_ln35_6_reg_625_reg is absorbed into DSP mul_ln35_6_reg_625_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_ln35_6_reg_625_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U7/dout is absorbed into DSP mul_ln35_6_reg_625_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U5/dout, operation Mode is: A''*B.
+DSP Report: register mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: register mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U5/dout, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_4_reg is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: register an32ShiftReg_5_reg is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U5/dout, operation Mode is: A*B''.
+DSP Report: register mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: register mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U5/dout, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_4_reg is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: register an32ShiftReg_5_reg is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U5/dout is absorbed into DSP mul_32s_32s_32_1_1_U5/dout.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U3/dout, operation Mode is: A''*B.
+DSP Report: register mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: register mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: Generating DSP mul_ln35_2_reg_585_reg, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_6_reg is absorbed into DSP mul_ln35_2_reg_585_reg.
+DSP Report: register an32ShiftReg_7_reg is absorbed into DSP mul_ln35_2_reg_585_reg.
+DSP Report: register mul_ln35_2_reg_585_reg is absorbed into DSP mul_ln35_2_reg_585_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_ln35_2_reg_585_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_ln35_2_reg_585_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U3/dout, operation Mode is: A*B''.
+DSP Report: register mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: register mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_32s_32s_32_1_1_U3/dout.
+DSP Report: Generating DSP mul_ln35_2_reg_585_reg, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_6_reg is absorbed into DSP mul_ln35_2_reg_585_reg.
+DSP Report: register an32ShiftReg_7_reg is absorbed into DSP mul_ln35_2_reg_585_reg.
+DSP Report: register mul_ln35_2_reg_585_reg is absorbed into DSP mul_ln35_2_reg_585_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_ln35_2_reg_585_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U3/dout is absorbed into DSP mul_ln35_2_reg_585_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U4/dout, operation Mode is: A''*B.
+DSP Report: register mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_32s_32s_32_1_1_U4/dout.
+DSP Report: register mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_32s_32s_32_1_1_U4/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_32s_32s_32_1_1_U4/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_32s_32s_32_1_1_U4/dout.
+DSP Report: Generating DSP mul_ln35_3_reg_595_reg, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_5_reg is absorbed into DSP mul_ln35_3_reg_595_reg.
+DSP Report: register an32ShiftReg_6_reg is absorbed into DSP mul_ln35_3_reg_595_reg.
+DSP Report: register mul_ln35_3_reg_595_reg is absorbed into DSP mul_ln35_3_reg_595_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_ln35_3_reg_595_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_ln35_3_reg_595_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U4/dout, operation Mode is: A*B''.
+DSP Report: register mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_32s_32s_32_1_1_U4/dout.
+DSP Report: register mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_32s_32s_32_1_1_U4/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_32s_32s_32_1_1_U4/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_32s_32s_32_1_1_U4/dout.
+DSP Report: Generating DSP mul_ln35_3_reg_595_reg, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register an32ShiftReg_5_reg is absorbed into DSP mul_ln35_3_reg_595_reg.
+DSP Report: register an32ShiftReg_6_reg is absorbed into DSP mul_ln35_3_reg_595_reg.
+DSP Report: register mul_ln35_3_reg_595_reg is absorbed into DSP mul_ln35_3_reg_595_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_ln35_3_reg_595_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U4/dout is absorbed into DSP mul_ln35_3_reg_595_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U10/dout, operation Mode is: A2*B.
+DSP Report: register mul_32s_32s_32_1_1_U10/dout is absorbed into DSP mul_32s_32s_32_1_1_U10/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U10/dout is absorbed into DSP mul_32s_32s_32_1_1_U10/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U10/dout is absorbed into DSP mul_32s_32s_32_1_1_U10/dout.
+DSP Report: Generating DSP mul_ln35_9_reg_690_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_ln35_9_reg_690_reg is absorbed into DSP mul_ln35_9_reg_690_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U10/dout is absorbed into DSP mul_ln35_9_reg_690_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U10/dout is absorbed into DSP mul_ln35_9_reg_690_reg.
+DSP Report: Generating DSP mul_32s_32s_32_1_1_U10/dout, operation Mode is: A*B2.
+DSP Report: register mul_32s_32s_32_1_1_U10/dout is absorbed into DSP mul_32s_32s_32_1_1_U10/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U10/dout is absorbed into DSP mul_32s_32s_32_1_1_U10/dout.
+DSP Report: operator mul_32s_32s_32_1_1_U10/dout is absorbed into DSP mul_32s_32s_32_1_1_U10/dout.
+DSP Report: Generating DSP mul_ln35_9_reg_690_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_ln35_9_reg_690_reg is absorbed into DSP mul_ln35_9_reg_690_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U10/dout is absorbed into DSP mul_ln35_9_reg_690_reg.
+DSP Report: operator mul_32s_32s_32_1_1_U10/dout is absorbed into DSP mul_ln35_9_reg_690_reg.
+RAM ("inst/control_s_axi_U/int_an32Coef/mem_reg") is too shallow (depth = 12) to use URAM. Choosing BRAM instead of URAM 
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[47]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[46]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[45]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[44]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[43]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[42]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[41]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[40]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[39]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[38]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[37]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[36]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[35]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[34]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[33]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[32]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[31]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[30]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[29]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[28]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[27]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[26]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[25]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[24]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[23]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[22]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[21]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[20]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[19]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[18]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[17]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[16]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[15]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[47]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[46]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[45]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[44]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[43]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[42]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[41]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[40]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[39]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[38]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[37]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[36]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[35]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[34]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[33]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[32]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[31]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[30]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[29]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[28]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[27]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[26]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[25]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[24]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[23]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[22]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[21]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[20]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[19]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[18]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_reg_565_reg[17]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[47]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[46]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[45]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[44]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[43]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[42]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[41]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[40]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[39]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[38]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[37]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[36]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[35]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[34]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[33]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[32]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[31]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[30]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[29]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[28]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[27]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[26]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[25]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[24]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[23]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[22]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[21]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[20]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[19]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[18]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[17]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[16]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[15]) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[47]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[46]__0) is unused and will be removed from module fir_n11_strm.
+WARNING: [Synth 8-3332] Sequential element (grp_fir_n11_strm_Pipeline_XFER_LOOP_fu_112/mul_ln35_5_reg_615_reg[45]__0) is unused and will be removed from module fir_n11_strm.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:00 . Memory (MB): peak = 3320.758 ; gain = 429.211 ; free physical = 3979 ; free virtual = 7732
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name | RTL Object                           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|inst        | control_s_axi_U/int_an32Coef/mem_reg | 12 x 32(READ_FIRST)    | W | R | 12 x 32(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      |                 | 
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------------------------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                  | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A''*B            | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 15     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 18     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A''*B            | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 15     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 18     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A''*B            | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 15     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 18     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B   | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B   | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A''*B            | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B2  | 15     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B2  | 18     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A''*B            | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 15     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 18     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A''*B            | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 15     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 18     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A''*B            | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 15     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 18     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A''*B            | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 15     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 18     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A''*B            | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 15     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B'' | 18     | 15     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A2*B             | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B   | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17)+A*B   | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++---------------------------------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:23 . Memory (MB): peak = 3701.617 ; gain = 810.070 ; free physical = 2477 ; free virtual = 6230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5584] The signal "inst/control_s_axi_U/int_an32Coef/mem_reg" is implemented as distributed LUT RAM for the following reason(s): The timing constraints suggest that the chosen mapping will yield better timing results.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:29 . Memory (MB): peak = 3714.633 ; gain = 823.086 ; free physical = 2375 ; free virtual = 6128
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
+-------NONE-------
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:32 . Memory (MB): peak = 3738.656 ; gain = 847.109 ; free physical = 2340 ; free virtual = 6092
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:31 ; elapsed = 00:01:46 . Memory (MB): peak = 3750.562 ; gain = 859.016 ; free physical = 2394 ; free virtual = 6148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:31 ; elapsed = 00:01:46 . Memory (MB): peak = 3750.562 ; gain = 859.016 ; free physical = 2393 ; free virtual = 6148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:32 ; elapsed = 00:01:47 . Memory (MB): peak = 3750.562 ; gain = 859.016 ; free physical = 2392 ; free virtual = 6147
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:32 ; elapsed = 00:01:47 . Memory (MB): peak = 3750.562 ; gain = 859.016 ; free physical = 2392 ; free virtual = 6147
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:32 ; elapsed = 00:01:48 . Memory (MB): peak = 3750.562 ; gain = 859.016 ; free physical = 2392 ; free virtual = 6147
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:32 ; elapsed = 00:01:48 . Memory (MB): peak = 3750.562 ; gain = 859.016 ; free physical = 2392 ; free virtual = 6147
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                  | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17+A'*B'')' | 17     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17+A'*B'')' | 17     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17+A'*B'')' | 17     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17+A'*B'')' | 17     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17+A'*B'')' | 17     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17+A'*B'')' | 17     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (PCIN>>17+A'*B')'  | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (A''*B')'          | 17     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (A'*B')'           | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A'*B'              | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A'*B'              | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A'*B'              | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | PCIN>>17+A'*B'     | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A''*B'             | 17     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | PCIN>>17+A'*B''    | 17     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (A''*B')'          | 17     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (A''*B')'          | 17     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A''*B'             | 17     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | PCIN>>17+A'*B''    | 17     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (A''*B')'          | 17     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (A''*B')'          | 17     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A''*B'             | 17     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | PCIN>>17+A'*B''    | 17     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | (A''*B')'          | 17     | 18     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 1    | 
+|fir_n11_strm_fir_n11_strm_Pipeline_XFER_LOOP | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
++---------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |    56|
+|2     |DSP_ALU         |    33|
+|3     |DSP_A_B_DATA    |    33|
+|6     |DSP_C_DATA      |    33|
+|7     |DSP_MULTIPLIER  |    33|
+|8     |DSP_M_DATA      |    33|
+|9     |DSP_OUTPUT      |    33|
+|11    |DSP_PREADD      |    33|
+|12    |DSP_PREADD_DATA |    33|
+|13    |LUT1            |     3|
+|14    |LUT2            |   243|
+|15    |LUT3            |   322|
+|16    |LUT4            |   152|
+|17    |LUT5            |   117|
+|18    |LUT6            |    55|
+|19    |RAM16X1D        |    32|
+|20    |FDRE            |   950|
+|21    |FDSE            |     2|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:32 ; elapsed = 00:01:48 . Memory (MB): peak = 3750.562 ; gain = 859.016 ; free physical = 2392 ; free virtual = 6147
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 451 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:15 ; elapsed = 00:01:26 . Memory (MB): peak = 3750.562 ; gain = 736.352 ; free physical = 2435 ; free virtual = 6190
+Synthesis Optimization Complete : Time (s): cpu = 00:01:32 ; elapsed = 00:01:48 . Memory (MB): peak = 3750.570 ; gain = 859.016 ; free physical = 2435 ; free virtual = 6190
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3764.500 ; gain = 0.000 ; free physical = 2522 ; free virtual = 6277
+INFO: [Netlist 29-17] Analyzing 121 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3793.250 ; gain = 0.000 ; free physical = 2461 ; free virtual = 6215
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 65 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 33 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 32 instances
+
+Synth Design complete, checksum: 8f227e8f
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 139 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:52 ; elapsed = 00:02:04 . Memory (MB): peak = 3793.250 ; gain = 936.703 ; free physical = 2675 ; free virtual = 6429
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/design_1_fir_n11_strm_0_0_synth_1/design_1_fir_n11_strm_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_fir_n11_strm_0_0, cache-ID = 7b148d99fdef066c
+INFO: [Coretcl 2-1174] Renamed 30 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/course-lab_2/axi_stream_vvd/axi_stream_vvd.runs/design_1_fir_n11_strm_0_0_synth_1/design_1_fir_n11_strm_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_fir_n11_strm_0_0_utilization_synth.rpt -pb design_1_fir_n11_strm_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 30 03:06:15 2023...
