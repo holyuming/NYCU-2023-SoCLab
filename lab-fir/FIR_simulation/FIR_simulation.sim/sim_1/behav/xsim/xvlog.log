@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/course-lab_3/bram/bram11.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram11
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/course-lab_3/fir/rtl/fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/course-lab_3/fir/tb/fir_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'fir' [/home/ubuntu/course-lab_3/fir/rtl/fir.v:1]
+INFO: [VRFC 10-311] analyzing module bram11
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'bram11' [/home/ubuntu/course-lab_3/bram/bram11.v:3]
+INFO: [VRFC 10-311] analyzing module fir_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/course-lab_3/FIR_simulation/FIR_simulation.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
