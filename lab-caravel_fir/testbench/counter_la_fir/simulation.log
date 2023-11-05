@@ -3,8 +3,8 @@ counter_la_fir.hex loaded into memory
 Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
 VCD info: dumpfile counter_la_fir.vcd opened for output.
 LA Test 1 started
-Start timer:              1548788
-End timer:              2360563
+Start timer:              1445688
+End timer:              2250013
 index           0 received
 index           1 received
 index           2 received
@@ -70,8 +70,8 @@ index          61 received
 index          62 received
 index          63 received
 finsih           0 iteration
-Start timer:              6536388
-End timer:              7348163
+Start timer:              6421713
+End timer:              7226038
 index           0 received
 index           1 received
 index           2 received
@@ -137,8 +137,8 @@ index          61 received
 index          62 received
 index          63 received
 finsih           1 iteration
-Start timer:             11523988
-End timer:             12335763
+Start timer:             11397738
+End timer:             12202063
 index           0 received
 index           1 received
 index           2 received
@@ -204,5 +204,5 @@ index          61 received
 index          62 received
 index          63 received
 finsih           2 iteration
-overall latency: 97413 cycles
+overall latency: 96519 cycles
 LA Test 2 passed

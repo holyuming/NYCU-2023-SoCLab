@@ -1,5 +1,5 @@
 # 0 "fir.c"
-# 1 "/home/ubuntu/course-lab_4-2/testbench/counter_la_fir//"
+# 1 "/home/ubuntu/SoCLab/lab-caravel_fir/testbench/counter_la_fir//"
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "fir.c"
@@ -1599,10 +1599,7 @@ extern uint32_t sram;
 extern uint32_t flashio_worker_begin;
 extern uint32_t flashio_worker_end;
 # 5 "fir.h" 2
-# 28 "fir.h"
-int taps[11] = {0,-10,-9,23,56,63,56,23,-9,-10,0};
-
-
+# 26 "fir.h"
 int outputsignal[64];
 # 2 "fir.c" 2
 
@@ -1610,17 +1607,18 @@ void __attribute__ ( ( section ( ".mprjram" ) ) ) initfir() {
 
  (*(volatile uint32_t*) 0x30000010) = 64;
 
- (*(volatile uint32_t*) 0x30000040) = taps[0];
- (*(volatile uint32_t*) 0x30000044) = taps[1];
- (*(volatile uint32_t*) 0x30000048) = taps[2];
- (*(volatile uint32_t*) 0x3000004c) = taps[3];
- (*(volatile uint32_t*) 0x30000050) = taps[4];
- (*(volatile uint32_t*) 0x30000054) = taps[5];
- (*(volatile uint32_t*) 0x30000058) = taps[6];
- (*(volatile uint32_t*) 0x3000005c) = taps[7];
- (*(volatile uint32_t*) 0x30000060) = taps[8];
- (*(volatile uint32_t*) 0x30000064) = taps[9];
- (*(volatile uint32_t*) 0x30000068) = taps[10];
+
+ (*(volatile uint32_t*) 0x30000040) = 0;
+ (*(volatile uint32_t*) 0x30000044) = -10;
+ (*(volatile uint32_t*) 0x30000048) = -9;
+ (*(volatile uint32_t*) 0x3000004c) = 23;
+ (*(volatile uint32_t*) 0x30000050) = 56;
+ (*(volatile uint32_t*) 0x30000054) = 63;
+ (*(volatile uint32_t*) 0x30000058) = 56;
+ (*(volatile uint32_t*) 0x3000005c) = 23;
+ (*(volatile uint32_t*) 0x30000060) = -9;
+ (*(volatile uint32_t*) 0x30000064) = -10;
+ (*(volatile uint32_t*) 0x30000068) = 0;
 
  return;
 }
@@ -1635,15 +1633,9 @@ int* __attribute__ ( ( section ( ".mprjram" ) ) ) fir(){
 
 
  for (int i=0; i<64; i++) {
-  while (((*(volatile uint32_t*) 0x30000000) >> 4) & 1 != 1) {
-
-  }
+  while (((*(volatile uint32_t*) 0x30000000) >> 4) & 1 != 1) {}
   (*(volatile uint32_t*) 0x30000080) = i;
-
-  while (((*(volatile uint32_t*) 0x30000000) >> 5) & 1 != 1) {
-
-  }
-
+  while (((*(volatile uint32_t*) 0x30000000) >> 5) & 1 != 1) {}
   outputsignal[i] = (*(volatile uint32_t*) 0x30000084);
  }
 

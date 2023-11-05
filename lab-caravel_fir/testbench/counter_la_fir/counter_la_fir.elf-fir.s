@@ -6,7 +6,7 @@
 	.text
 .Ltext0:
 	.cfi_sections	.debug_frame
-	.file 0 "/home/ubuntu/course-lab_4-2/testbench/counter_la_fir" "fir.c"
+	.file 0 "/home/ubuntu/SoCLab/lab-caravel_fir/testbench/counter_la_fir" "fir.c"
 	.align	2
 	.type	flush_cpu_icache, @function
 flush_cpu_icache:
@@ -54,23 +54,6 @@ flush_cpu_dcache:
 	.cfi_endproc
 .LFE22:
 	.size	flush_cpu_dcache, .-flush_cpu_dcache
-	.globl	taps
-	.data
-	.align	2
-	.type	taps, @object
-	.size	taps, 44
-taps:
-	.word	0
-	.word	-10
-	.word	-9
-	.word	23
-	.word	56
-	.word	63
-	.word	56
-	.word	23
-	.word	-9
-	.word	-10
-	.word	0
 	.globl	outputsignal
 	.bss
 	.align	2
@@ -99,108 +82,73 @@ initfir:
 	.loc 2 5 37
 	li	a4,64
 	sw	a4,0(a5)
-	.loc 2 7 43
-	lui	a5,%hi(taps)
-	addi	a5,a5,%lo(taps)
-	lw	a4,0(a5)
-	.loc 2 7 3
-	li	a5,805306368
-	addi	a5,a5,64
-	.loc 2 7 37
-	sw	a4,0(a5)
-	.loc 2 8 43
-	lui	a5,%hi(taps)
-	addi	a5,a5,%lo(taps)
-	lw	a4,4(a5)
 	.loc 2 8 3
 	li	a5,805306368
-	addi	a5,a5,68
+	addi	a5,a5,64
 	.loc 2 8 37
-	sw	a4,0(a5)
-	.loc 2 9 43
-	lui	a5,%hi(taps)
-	addi	a5,a5,%lo(taps)
-	lw	a4,8(a5)
+	sw	zero,0(a5)
 	.loc 2 9 3
 	li	a5,805306368
-	addi	a5,a5,72
+	addi	a5,a5,68
 	.loc 2 9 37
+	li	a4,-10
 	sw	a4,0(a5)
-	.loc 2 10 43
-	lui	a5,%hi(taps)
-	addi	a5,a5,%lo(taps)
-	lw	a4,12(a5)
 	.loc 2 10 3
 	li	a5,805306368
-	addi	a5,a5,76
+	addi	a5,a5,72
 	.loc 2 10 37
+	li	a4,-9
 	sw	a4,0(a5)
-	.loc 2 11 43
-	lui	a5,%hi(taps)
-	addi	a5,a5,%lo(taps)
-	lw	a4,16(a5)
 	.loc 2 11 3
 	li	a5,805306368
-	addi	a5,a5,80
+	addi	a5,a5,76
 	.loc 2 11 37
+	li	a4,23
 	sw	a4,0(a5)
-	.loc 2 12 43
-	lui	a5,%hi(taps)
-	addi	a5,a5,%lo(taps)
-	lw	a4,20(a5)
 	.loc 2 12 3
 	li	a5,805306368
-	addi	a5,a5,84
+	addi	a5,a5,80
 	.loc 2 12 37
+	li	a4,56
 	sw	a4,0(a5)
-	.loc 2 13 43
-	lui	a5,%hi(taps)
-	addi	a5,a5,%lo(taps)
-	lw	a4,24(a5)
 	.loc 2 13 3
 	li	a5,805306368
-	addi	a5,a5,88
+	addi	a5,a5,84
 	.loc 2 13 37
+	li	a4,63
 	sw	a4,0(a5)
-	.loc 2 14 43
-	lui	a5,%hi(taps)
-	addi	a5,a5,%lo(taps)
-	lw	a4,28(a5)
 	.loc 2 14 3
 	li	a5,805306368
-	addi	a5,a5,92
+	addi	a5,a5,88
 	.loc 2 14 37
+	li	a4,56
 	sw	a4,0(a5)
-	.loc 2 15 43
-	lui	a5,%hi(taps)
-	addi	a5,a5,%lo(taps)
-	lw	a4,32(a5)
 	.loc 2 15 3
 	li	a5,805306368
-	addi	a5,a5,96
+	addi	a5,a5,92
 	.loc 2 15 37
+	li	a4,23
 	sw	a4,0(a5)
-	.loc 2 16 43
-	lui	a5,%hi(taps)
-	addi	a5,a5,%lo(taps)
-	lw	a4,36(a5)
 	.loc 2 16 3
 	li	a5,805306368
-	addi	a5,a5,100
+	addi	a5,a5,96
 	.loc 2 16 37
+	li	a4,-9
 	sw	a4,0(a5)
-	.loc 2 17 43
-	lui	a5,%hi(taps)
-	addi	a5,a5,%lo(taps)
-	lw	a4,40(a5)
 	.loc 2 17 3
 	li	a5,805306368
-	addi	a5,a5,104
+	addi	a5,a5,100
 	.loc 2 17 37
+	li	a4,-10
 	sw	a4,0(a5)
-	.loc 2 19 2
+	.loc 2 18 3
+	li	a5,805306368
+	addi	a5,a5,104
+	.loc 2 18 37
+	sw	zero,0(a5)
+	.loc 2 20 2
 	nop
-	.loc 2 20 1
+	.loc 2 21 1
 	lw	s0,12(sp)
 	.cfi_restore 8
 	.cfi_def_cfa 2, 16
@@ -215,7 +163,7 @@ initfir:
 	.type	fir, @function
 fir:
 .LFB317:
-	.loc 2 22 56
+	.loc 2 23 56
 	.cfi_startproc
 	addi	sp,sp,-32
 	.cfi_def_cfa_offset 32
@@ -225,81 +173,81 @@ fir:
 	.cfi_offset 8, -8
 	addi	s0,sp,32
 	.cfi_def_cfa 8, 0
-	.loc 2 23 2
+	.loc 2 24 2
 	call	initfir
-	.loc 2 25 3
+	.loc 2 26 3
 	li	a5,805306368
-	.loc 2 25 37
+	.loc 2 26 37
 	li	a4,1
 	sw	a4,0(a5)
-	.loc 2 28 3
+	.loc 2 29 3
 	li	a5,637534208
 	addi	a5,a5,12
-	.loc 2 28 36
+	.loc 2 29 36
 	li	a4,10813440
 	sw	a4,0(a5)
 .LBB2:
-	.loc 2 31 11
+	.loc 2 32 11
 	sw	zero,-20(s0)
-	.loc 2 31 2
+	.loc 2 32 2
 	j	.L6
 .L7:
-	.loc 2 32 9
+	.loc 2 33 9
 	nop
-	.loc 2 32 12
+	.loc 2 33 12
 	li	a5,805306368
 	lw	a5,0(a5)
-	.loc 2 35 4
+	.loc 2 34 4
 	li	a5,805306368
 	addi	a5,a5,128
-	.loc 2 35 38
+	.loc 2 34 38
 	lw	a4,-20(s0)
 	sw	a4,0(a5)
-	.loc 2 37 9
+	.loc 2 35 9
 	nop
-	.loc 2 37 12
+	.loc 2 35 12
 	li	a5,805306368
 	lw	a5,0(a5)
-	.loc 2 41 22
+	.loc 2 36 22
 	li	a5,805306368
 	addi	a5,a5,132
 	lw	a5,0(a5)
 	mv	a3,a5
-	.loc 2 41 19
+	.loc 2 36 19
 	lui	a5,%hi(outputsignal)
 	addi	a4,a5,%lo(outputsignal)
 	lw	a5,-20(s0)
 	slli	a5,a5,2
 	add	a5,a4,a5
 	sw	a3,0(a5)
-	.loc 2 31 23
+	.loc 2 32 23
 	lw	a5,-20(s0)
 	addi	a5,a5,1
 	sw	a5,-20(s0)
 .L6:
-	.loc 2 31 17 discriminator 1
+	.loc 2 32 17 discriminator 1
 	lw	a4,-20(s0)
 	li	a5,63
 	ble	a4,a5,.L7
 .LBE2:
-	.loc 2 45 52
+	.loc 2 40 52
 	lui	a5,%hi(outputsignal)
 	addi	a5,a5,%lo(outputsignal)
 	lw	a5,252(a5)
-	.loc 2 45 65
+	.loc 2 40 65
 	slli	a4,a5,24
-	.loc 2 45 72
+	.loc 2 40 72
 	li	a5,5898240
 	or	a4,a4,a5
-	.loc 2 45 3
+	.loc 2 40 3
 	li	a5,637534208
 	addi	a5,a5,12
-	.loc 2 45 36
+	.loc 2 40 36
 	sw	a4,0(a5)
-	.loc 2 47 9
+	.loc 2 42 9
 	lui	a5,%hi(outputsignal)
 	addi	a5,a5,%lo(outputsignal)
-	.loc 2 48 1
+	.loc 2 43 1
 	mv	a0,a5
 	lw	ra,28(sp)
 	.cfi_restore 1
@@ -314,17 +262,17 @@ fir:
 	.size	fir, .-fir
 	.text
 .Letext0:
-	.file 3 "fir.h"
-	.file 4 "/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include/stdint-gcc.h"
+	.file 3 "/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include/stdint-gcc.h"
+	.file 4 "fir.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x12b
+	.4byte	0x10d
 	.2byte	0x5
 	.byte	0x1
 	.byte	0x4
 	.4byte	.Ldebug_abbrev0
-	.byte	0x6
-	.4byte	.LASF15
+	.byte	0x3
+	.4byte	.LASF13
 	.byte	0x1d
 	.4byte	.LASF0
 	.4byte	.LASF1
@@ -355,9 +303,9 @@ fir:
 	.byte	0x2
 	.byte	0x7
 	.4byte	.LASF7
-	.byte	0x7
-	.4byte	.LASF16
 	.byte	0x4
+	.4byte	.LASF14
+	.byte	0x3
 	.byte	0x34
 	.byte	0x1b
 	.4byte	0x5c
@@ -369,7 +317,7 @@ fir:
 	.byte	0x8
 	.byte	0x7
 	.4byte	.LASF9
-	.byte	0x8
+	.byte	0x5
 	.byte	0x4
 	.byte	0x5
 	.string	"int"
@@ -377,49 +325,37 @@ fir:
 	.byte	0x4
 	.byte	0x7
 	.4byte	.LASF10
-	.byte	0x2
+	.byte	0x6
 	.4byte	0x6a
 	.4byte	0x88
-	.byte	0x3
-	.4byte	0x71
-	.byte	0xa
-	.byte	0
-	.byte	0x4
-	.4byte	.LASF11
-	.byte	0x1c
-	.4byte	0x78
-	.byte	0x5
-	.byte	0x3
-	.4byte	taps
-	.byte	0x2
-	.4byte	0x6a
-	.4byte	0xa8
-	.byte	0x3
+	.byte	0x7
 	.4byte	0x71
 	.byte	0x3f
 	.byte	0
+	.byte	0x8
+	.4byte	.LASF15
 	.byte	0x4
-	.4byte	.LASF12
-	.byte	0x1f
-	.4byte	0x98
+	.byte	0x1a
+	.byte	0x5
+	.4byte	0x78
 	.byte	0x5
 	.byte	0x3
 	.4byte	outputsignal
 	.byte	0x9
 	.string	"fir"
 	.byte	0x2
-	.byte	0x16
+	.byte	0x17
 	.byte	0x33
-	.4byte	0xf6
+	.4byte	0xd8
 	.4byte	.LFB317
 	.4byte	.LFE317-.LFB317
 	.byte	0x1
 	.byte	0x9c
-	.4byte	0xf6
+	.4byte	0xd8
 	.byte	0xa
 	.string	"ans"
 	.byte	0x2
-	.byte	0x18
+	.byte	0x19
 	.byte	0x6
 	.4byte	0x6a
 	.byte	0xb
@@ -428,7 +364,7 @@ fir:
 	.byte	0xc
 	.string	"i"
 	.byte	0x2
-	.byte	0x1f
+	.byte	0x20
 	.byte	0xb
 	.4byte	0x6a
 	.byte	0x2
@@ -440,7 +376,7 @@ fir:
 	.byte	0x4
 	.4byte	0x6a
 	.byte	0xe
-	.4byte	.LASF17
+	.4byte	.LASF16
 	.byte	0x2
 	.byte	0x3
 	.byte	0x33
@@ -448,15 +384,15 @@ fir:
 	.4byte	.LFE316-.LFB316
 	.byte	0x1
 	.byte	0x9c
-	.byte	0x5
-	.4byte	.LASF13
+	.byte	0x2
+	.4byte	.LASF11
 	.byte	0x1c
 	.4byte	.LFB22
 	.4byte	.LFE22-.LFB22
 	.byte	0x1
 	.byte	0x9c
-	.byte	0x5
-	.4byte	.LASF14
+	.byte	0x2
+	.4byte	.LASF12
 	.byte	0xe
 	.4byte	.LFB21
 	.4byte	.LFE21-.LFB21
@@ -477,45 +413,6 @@ fir:
 	.byte	0
 	.byte	0
 	.byte	0x2
-	.byte	0x1
-	.byte	0x1
-	.byte	0x49
-	.byte	0x13
-	.byte	0x1
-	.byte	0x13
-	.byte	0
-	.byte	0
-	.byte	0x3
-	.byte	0x21
-	.byte	0
-	.byte	0x49
-	.byte	0x13
-	.byte	0x2f
-	.byte	0xb
-	.byte	0
-	.byte	0
-	.byte	0x4
-	.byte	0x34
-	.byte	0
-	.byte	0x3
-	.byte	0xe
-	.byte	0x3a
-	.byte	0x21
-	.byte	0x3
-	.byte	0x3b
-	.byte	0xb
-	.byte	0x39
-	.byte	0x21
-	.byte	0x5
-	.byte	0x49
-	.byte	0x13
-	.byte	0x3f
-	.byte	0x19
-	.byte	0x2
-	.byte	0x18
-	.byte	0
-	.byte	0
-	.byte	0x5
 	.byte	0x2e
 	.byte	0
 	.byte	0x3
@@ -540,7 +437,7 @@ fir:
 	.byte	0x19
 	.byte	0
 	.byte	0
-	.byte	0x6
+	.byte	0x3
 	.byte	0x11
 	.byte	0x1
 	.byte	0x25
@@ -559,7 +456,7 @@ fir:
 	.byte	0x17
 	.byte	0
 	.byte	0
-	.byte	0x7
+	.byte	0x4
 	.byte	0x16
 	.byte	0
 	.byte	0x3
@@ -574,7 +471,7 @@ fir:
 	.byte	0x13
 	.byte	0
 	.byte	0
-	.byte	0x8
+	.byte	0x5
 	.byte	0x24
 	.byte	0
 	.byte	0xb
@@ -583,6 +480,43 @@ fir:
 	.byte	0xb
 	.byte	0x3
 	.byte	0x8
+	.byte	0
+	.byte	0
+	.byte	0x6
+	.byte	0x1
+	.byte	0x1
+	.byte	0x49
+	.byte	0x13
+	.byte	0x1
+	.byte	0x13
+	.byte	0
+	.byte	0
+	.byte	0x7
+	.byte	0x21
+	.byte	0
+	.byte	0x49
+	.byte	0x13
+	.byte	0x2f
+	.byte	0xb
+	.byte	0
+	.byte	0
+	.byte	0x8
+	.byte	0x34
+	.byte	0
+	.byte	0x3
+	.byte	0xe
+	.byte	0x3a
+	.byte	0xb
+	.byte	0x3b
+	.byte	0xb
+	.byte	0x39
+	.byte	0xb
+	.byte	0x49
+	.byte	0x13
+	.byte	0x3f
+	.byte	0x19
+	.byte	0x2
+	.byte	0x18
 	.byte	0
 	.byte	0
 	.byte	0x9
@@ -725,9 +659,9 @@ fir:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF17:
+.LASF16:
 	.string	"initfir"
-.LASF13:
+.LASF11:
 	.string	"flush_cpu_dcache"
 .LASF6:
 	.string	"unsigned char"
@@ -735,23 +669,21 @@ fir:
 	.string	"long unsigned int"
 .LASF7:
 	.string	"short unsigned int"
-.LASF15:
+.LASF13:
 	.string	"GNU C17 12.1.0 -mabi=ilp32 -mtune=rocket -misa-spec=2.2 -march=rv32i -g -ffreestanding"
 .LASF10:
 	.string	"unsigned int"
-.LASF11:
-	.string	"taps"
 .LASF9:
 	.string	"long long unsigned int"
-.LASF14:
-	.string	"flush_cpu_icache"
 .LASF12:
+	.string	"flush_cpu_icache"
+.LASF15:
 	.string	"outputsignal"
 .LASF5:
 	.string	"long long int"
 .LASF3:
 	.string	"short int"
-.LASF16:
+.LASF14:
 	.string	"uint32_t"
 .LASF4:
 	.string	"long int"
@@ -761,5 +693,5 @@ fir:
 .LASF0:
 	.string	"fir.c"
 .LASF1:
-	.string	"/home/ubuntu/course-lab_4-2/testbench/counter_la_fir"
+	.string	"/home/ubuntu/SoCLab/lab-caravel_fir/testbench/counter_la_fir"
 	.ident	"GCC: (g1ea978e3066) 12.1.0"

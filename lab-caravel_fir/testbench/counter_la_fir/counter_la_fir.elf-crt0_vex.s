@@ -1,5 +1,5 @@
 # 0 "../../firmware/crt0_vex.S"
-# 1 "/home/ubuntu/course-lab_4-2/testbench/counter_la_fir//"
+# 1 "/home/ubuntu/SoCLab/lab-caravel_fir/testbench/counter_la_fir//"
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "../../firmware/crt0_vex.S"
