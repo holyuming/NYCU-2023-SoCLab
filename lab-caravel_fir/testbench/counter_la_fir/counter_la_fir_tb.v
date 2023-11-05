@@ -211,14 +211,6 @@ end
 initial begin
 	wait(checkbits == 16'hAB40);
 	$display("LA Test 1 started");
-
-	// for (k=0; k<3; k=k+1) begin
-	// 	for (l=0; l<64; l=l+1) begin
-	// 		wait(checkbits == gold_ans[l][15:0]);
-	// 		// $display("index %d received", l);
-	// 	end
-	// 	$display("finsih %d", k);
-	// end
 	
 	for (k=0; k<3; k=k+1) begin
 		for (l=0; l<64; l=l+1) begin
