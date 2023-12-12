@@ -1,0 +1,39 @@
+Reading top.hex
+top.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+LA mm 1 started
+LA uart 1 started
+tx data bit index 0: 1
+tx data bit index 1: 1
+tx data bit index 2: 1
+tx data bit index 3: 1
+tx data bit index 4: 0
+tx data bit index 5: 0
+tx data bit index 6: 0
+tx data bit index 7: 0
+tx complete 1
+rx data bit index 0: 1
+rx data bit index 1: 1
+rx data bit index 2: 1
+rx data bit index 3: 1
+rx data bit index 4: 0
+rx data bit index 5: 0
+rx data bit index 6: 0
+rx data bit index 7: 0
+Received 15
+LA uart 1 passed
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x003e
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x0044
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x004a
+recevied word  15
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x0050
+LA mm 2 passed
+LA fir 1 started
+LA fir 2 passed
+LA qs 1 started
+Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x0028
+Received    40
+Received   893
+Received  2541
+Received  2669
+LA qs 2 passed

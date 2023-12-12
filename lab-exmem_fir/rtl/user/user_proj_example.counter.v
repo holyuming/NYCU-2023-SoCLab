@@ -42,7 +42,7 @@
 
 module user_proj_example #(
     parameter BITS = 32,
-    parameter DELAYS=10
+    parameter DELAYS=1
 )(
 `ifdef USE_POWER_PINS
     inout vccd1,	// User area 1 1.8V supply
