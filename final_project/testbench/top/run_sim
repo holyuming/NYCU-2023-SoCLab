@@ -1,0 +1,21 @@
+rm -f top.hex
+
+riscv32-unknown-elf-gcc -O3 -Wl,--no-warn-rwx-segments -g \
+	--save-temps \
+	-Xlinker -Map=output.map \
+	-I../../firmware \
+	-march=rv32i -mabi=ilp32 -D__vexriscv__ -DUSER_PROJ_IRQ0_EN \
+	-Wl,-Bstatic,-T,../../firmware/sections.lds,--strip-discarded \
+	-ffreestanding -nostartfiles -o top.elf ../../firmware/crt0_vex.S ../../firmware/isr.c func.c top.c
+# -nostartfiles	
+riscv32-unknown-elf-objcopy -O verilog top.elf top.hex
+riscv32-unknown-elf-objdump -D top.elf > top.out
+
+# to fix flash base address
+sed -ie 's/@10/@00/g' top.hex
+
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUNIT_DELAY=#1 \
+	-f./include.rtl.list -o top.vvp top_tb.v 
+
+vvp -l simulation.log top.vvp
+rm -f top.vvp top.elf top.hexe
