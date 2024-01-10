@@ -14,7 +14,37 @@ source run_sim
 Reading top.hex
 top.hex loaded into memory
 Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
-start time             2851738
+LA mm 1 started
+mm latency: 73729
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x003e
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x0044
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x004a
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x0050
+LA mm 2 passed
+LA fir 1 started
+LA fir 2 passed
+fir latency: 162936
+LA qs 1 started
+qs latency: 29525
+Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x0028
+Received    40
+Received   893
+Received  2541
+Received  2669
+LA qs 2 passed
+
+```
+<br>
+
+### Thus, we build our own customized hardware for 3 different workloads.<br>
+HDL file is in `final_project/rtl/user/design.v`, including 3 verilog modules.
+
+```sh
+Reading top.hex
+top.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+VCD info: dumpfile top.vcd opened for output.
+start time             1205513
 LA qs 1 started
 Received    40
 Received   893
@@ -27,8 +57,8 @@ Received  5681
 Received  6023
 Received  9073
 LA qs 2 passed
-QS latency:       41737
-start time             3895438
+QS latency:       4218
+start time             1396988
 LA fir 1 started
 Received:     0
 Received:   -10
@@ -42,8 +72,8 @@ Received:   732
 Received:   915
 Received:  1098
 LA fir 2 passed
-fir latency:       174090
-start time             8274788
+fir latency:       3436
+start time             1595938
 LA mm 1 started
 Received:    62
 Received:    68
@@ -62,19 +92,18 @@ Received:    68
 Received:    74
 Received:    80
 LA mm 2 passed
-MM latency:       90444
+MM latency:       3837
 Congrats
-             10535888
+             1861813
+
 ```
-<br>
 
-### Thus, we build our own customized hardware for 3 different workloads.<br>
-HDL file is in `final_project/rtl/user/design.v`, including 3 verilog modules.
-
+### Last, we add instruction prefetch scheme using sdram_controller to boost instrucion read latency.<br>
 ```sh
 Reading top.hex
 top.hex loaded into memory
 Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+VCD info: dumpfile top.vcd opened for output.
 start time             1180513
 LA qs 1 started
 Received    40
@@ -88,8 +117,8 @@ Received  5681
 Received  6023
 Received  9073
 LA qs 2 passed
-QS latency:       7148
-start time             1359488
+QS latency:       3730
+start time             1359788
 LA fir 1 started
 Received:     0
 Received:   -10
@@ -103,8 +132,8 @@ Received:   732
 Received:   915
 Received:  1098
 LA fir 2 passed
-fir latency:       7303
-start time             1542338
+fir latency:       2804
+start time             1542938
 LA mm 1 started
 Received:    62
 Received:    68
@@ -123,16 +152,15 @@ Received:    68
 Received:    74
 Received:    80
 LA mm 2 passed
-MM latency:       9744
+MM latency:       3000
 Congrats
-             1785938
+             1787888
 ```
 
 ### Conclusion: We can see that latency for each workload drops significantly.
 
-| Task | Latency w/o Hardware | Latency w/ Hardware |
-|:----:|:---------------------:|:-------------------:|
-|  qs  |        41,737         |        7,148        |
-|  fir |       174,090         |        7,303        |
-|  mm  |        90,444         |        9,744        |
-
+|   Task   | Latency w/o Hardware | Latency w/ Hardware | Hardware + Prefetch | Compiler -O1 |
+|:--------:|:--------------------:|:-------------------:|:-------------------:|:------------:|
+|  qsort() |         29525        |         4218        |         3730        |     2736     |
+|   fir()  |        162936        |         3436        |         2804        |     1767     |
+| matmul() |         73729        |         3837        |         3000        |     1957     |

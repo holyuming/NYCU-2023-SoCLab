@@ -55,6 +55,11 @@ isr:
 	bne	a5,zero,.L7
 	ret
 .L7:
+	.loc 1 24 1
+	addi	sp,sp,-16
+	.cfi_def_cfa_offset 16
+	sw	ra,12(sp)
+	.cfi_offset 1, -4
 	.loc 1 36 9 is_stmt 1
 .LVL4:
 .LBB16:
@@ -64,38 +69,28 @@ isr:
 .LBB18:
 	.file 4 "../../firmware/hw/common.h"
 	.loc 4 34 2
-.LBE18:
-.LBE17:
-.LBE16:
-	.loc 1 24 1 is_stmt 0
-	addi	sp,sp,-16
-	.cfi_def_cfa_offset 16
-	sw	ra,12(sp)
-	.cfi_offset 1, -4
-.LBB21:
-.LBB20:
-.LBB19:
-	.loc 4 34 32
+	.loc 4 34 32 is_stmt 0
 	li	a5,-268406784
 	li	a4,1
 	sw	a4,-2032(a5)
 .LVL5:
-.LBE19:
-.LBE20:
-.LBE21:
+.LBE18:
+.LBE17:
+.LBE16:
 	.loc 1 37 9 is_stmt 1
 	.loc 1 37 15 is_stmt 0
 	call	uart_read
 .LVL6:
 	.loc 1 38 9 is_stmt 1
+	call	uart_write
+.LVL7:
+	.loc 1 43 5
 	.loc 1 45 1 is_stmt 0
 	lw	ra,12(sp)
 	.cfi_restore 1
 	addi	sp,sp,16
 	.cfi_def_cfa_offset 0
-	.loc 1 38 9
-	tail	uart_write
-.LVL7:
+	jr	ra
 	.cfi_endproc
 .LFE321:
 	.size	isr, .-isr
@@ -111,12 +106,12 @@ counter:
 	.file 5 "/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include/stdint-gcc.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x1c8
+	.4byte	0x1c9
 	.2byte	0x5
 	.byte	0x1
 	.byte	0x4
 	.4byte	.Ldebug_abbrev0
-	.byte	0xa
+	.byte	0xb
 	.4byte	.LASF18
 	.byte	0x1d
 	.4byte	.LASF0
@@ -148,7 +143,7 @@ counter:
 	.byte	0x2
 	.byte	0x7
 	.4byte	.LASF7
-	.byte	0xb
+	.byte	0xc
 	.4byte	.LASF19
 	.byte	0x5
 	.byte	0x34
@@ -162,7 +157,7 @@ counter:
 	.byte	0x8
 	.byte	0x7
 	.4byte	.LASF9
-	.byte	0xc
+	.byte	0xd
 	.byte	0x4
 	.byte	0x5
 	.string	"int"
@@ -170,7 +165,7 @@ counter:
 	.byte	0x4
 	.byte	0x7
 	.4byte	.LASF10
-	.byte	0xd
+	.byte	0xe
 	.4byte	.LASF20
 	.byte	0x1
 	.byte	0x14
@@ -179,21 +174,21 @@ counter:
 	.byte	0x5
 	.byte	0x3
 	.4byte	counter
-	.byte	0x3
+	.byte	0x4
 	.4byte	.LASF11
 	.byte	0xd
 	.4byte	0x6a
 	.4byte	0x9a
-	.byte	0x4
+	.byte	0x5
 	.byte	0
-	.byte	0x3
+	.byte	0x4
 	.4byte	.LASF12
 	.byte	0xa
 	.4byte	0x6a
 	.4byte	0xaa
-	.byte	0x4
+	.byte	0x5
 	.byte	0
-	.byte	0xe
+	.byte	0xf
 	.string	"isr"
 	.byte	0x1
 	.byte	0x17
@@ -202,117 +197,118 @@ counter:
 	.4byte	.LFE321-.LFB321
 	.byte	0x1
 	.byte	0x9c
-	.4byte	0x165
-	.byte	0xf
+	.4byte	0x166
+	.byte	0x10
 	.4byte	.LASF13
 	.byte	0x1
 	.byte	0x20
 	.byte	0xe
 	.4byte	0x50
 	.4byte	.LLST0
-	.byte	0x10
+	.byte	0x11
 	.string	"buf"
 	.byte	0x1
 	.byte	0x21
 	.byte	0x9
 	.4byte	0x6a
 	.4byte	.LLST1
-	.byte	0x5
-	.4byte	0x165
+	.byte	0x2
+	.4byte	0x166
 	.4byte	.LBB12
 	.4byte	.LBE12-.LBB12
+	.byte	0x20
 	.byte	0x15
-	.4byte	0xf8
+	.4byte	0xf9
 	.byte	0x6
-	.4byte	0x173
+	.4byte	0x174
 	.byte	0
-	.byte	0x5
-	.4byte	0x17e
+	.byte	0x2
+	.4byte	0x17f
 	.4byte	.LBB14
 	.4byte	.LBE14-.LBB14
+	.byte	0x20
 	.byte	0x25
-	.4byte	0x110
+	.4byte	0x112
 	.byte	0x6
-	.4byte	0x18c
+	.4byte	0x18d
 	.byte	0
-	.byte	0x11
-	.4byte	0x197
+	.byte	0x2
+	.4byte	0x198
 	.4byte	.LBB16
-	.4byte	.LLRL2
-	.byte	0x1
+	.4byte	.LBE16-.LBB16
 	.byte	0x24
 	.byte	0x9
-	.4byte	0x152
-	.byte	0x2
-	.4byte	0x1a5
-	.4byte	.LLST3
+	.4byte	0x153
+	.byte	0x3
+	.4byte	0x1a6
+	.4byte	.LLST2
 	.byte	0x12
-	.4byte	0x1b1
+	.4byte	0x1b2
 	.4byte	.LBB17
-	.4byte	.LLRL2
+	.4byte	.LBE17-.LBB17
 	.byte	0x3
 	.2byte	0x30b
 	.byte	0x2
-	.byte	0x2
-	.4byte	0x1c2
-	.4byte	.LLST4
-	.byte	0x2
-	.4byte	0x1ba
+	.byte	0x3
+	.4byte	0x1c3
 	.4byte	.LLST3
+	.byte	0x3
+	.4byte	0x1bb
+	.4byte	.LLST2
 	.byte	0
 	.byte	0
-	.byte	0x13
+	.byte	0x7
 	.4byte	.LVL6
 	.4byte	0x9a
-	.byte	0x14
+	.byte	0x7
 	.4byte	.LVL7
 	.4byte	0x8a
 	.byte	0
-	.byte	0x7
+	.byte	0x8
 	.4byte	.LASF14
 	.byte	0x22
 	.4byte	0x71
-	.4byte	0x17e
-	.byte	0x8
+	.4byte	0x17f
+	.byte	0x9
 	.4byte	.LASF16
 	.byte	0x24
 	.4byte	0x71
 	.byte	0
-	.byte	0x7
+	.byte	0x8
 	.4byte	.LASF15
 	.byte	0x16
 	.4byte	0x71
-	.4byte	0x197
-	.byte	0x8
+	.4byte	0x198
+	.byte	0x9
 	.4byte	.LASF17
 	.byte	0x18
 	.4byte	0x71
 	.byte	0
-	.byte	0x15
+	.byte	0x13
 	.4byte	.LASF21
 	.byte	0x3
 	.2byte	0x30a
 	.byte	0x14
 	.byte	0x3
-	.4byte	0x1b1
-	.byte	0x16
+	.4byte	0x1b2
+	.byte	0x14
 	.string	"v"
 	.byte	0x3
 	.2byte	0x30a
 	.byte	0x39
 	.4byte	0x50
 	.byte	0
-	.byte	0x17
+	.byte	0x15
 	.4byte	.LASF22
 	.byte	0x4
 	.byte	0x20
 	.byte	0x14
 	.byte	0x3
-	.byte	0x9
+	.byte	0xa
 	.string	"v"
 	.byte	0x33
 	.4byte	0x5c
-	.byte	0x9
+	.byte	0xa
 	.string	"a"
 	.byte	0x44
 	.4byte	0x5c
@@ -332,6 +328,26 @@ counter:
 	.byte	0
 	.byte	0
 	.byte	0x2
+	.byte	0x1d
+	.byte	0x1
+	.byte	0x31
+	.byte	0x13
+	.byte	0x11
+	.byte	0x1
+	.byte	0x12
+	.byte	0x6
+	.byte	0x58
+	.byte	0x21
+	.byte	0x1
+	.byte	0x59
+	.byte	0xb
+	.byte	0x57
+	.byte	0xb
+	.byte	0x1
+	.byte	0x13
+	.byte	0
+	.byte	0
+	.byte	0x3
 	.byte	0x5
 	.byte	0
 	.byte	0x31
@@ -340,7 +356,7 @@ counter:
 	.byte	0x17
 	.byte	0
 	.byte	0
-	.byte	0x3
+	.byte	0x4
 	.byte	0x2e
 	.byte	0x1
 	.byte	0x3f
@@ -363,30 +379,9 @@ counter:
 	.byte	0x13
 	.byte	0
 	.byte	0
-	.byte	0x4
+	.byte	0x5
 	.byte	0x18
 	.byte	0
-	.byte	0
-	.byte	0
-	.byte	0x5
-	.byte	0x1d
-	.byte	0x1
-	.byte	0x31
-	.byte	0x13
-	.byte	0x11
-	.byte	0x1
-	.byte	0x12
-	.byte	0x6
-	.byte	0x58
-	.byte	0x21
-	.byte	0x1
-	.byte	0x59
-	.byte	0x21
-	.byte	0x20
-	.byte	0x57
-	.byte	0xb
-	.byte	0x1
-	.byte	0x13
 	.byte	0
 	.byte	0
 	.byte	0x6
@@ -397,6 +392,15 @@ counter:
 	.byte	0
 	.byte	0
 	.byte	0x7
+	.byte	0x48
+	.byte	0
+	.byte	0x7d
+	.byte	0x1
+	.byte	0x7f
+	.byte	0x13
+	.byte	0
+	.byte	0
+	.byte	0x8
 	.byte	0x2e
 	.byte	0x1
 	.byte	0x3
@@ -420,7 +424,7 @@ counter:
 	.byte	0x13
 	.byte	0
 	.byte	0
-	.byte	0x8
+	.byte	0x9
 	.byte	0x34
 	.byte	0
 	.byte	0x3
@@ -437,7 +441,7 @@ counter:
 	.byte	0x13
 	.byte	0
 	.byte	0
-	.byte	0x9
+	.byte	0xa
 	.byte	0x5
 	.byte	0
 	.byte	0x3
@@ -454,7 +458,7 @@ counter:
 	.byte	0x13
 	.byte	0
 	.byte	0
-	.byte	0xa
+	.byte	0xb
 	.byte	0x11
 	.byte	0x1
 	.byte	0x25
@@ -473,7 +477,7 @@ counter:
 	.byte	0x17
 	.byte	0
 	.byte	0
-	.byte	0xb
+	.byte	0xc
 	.byte	0x16
 	.byte	0
 	.byte	0x3
@@ -488,7 +492,7 @@ counter:
 	.byte	0x13
 	.byte	0
 	.byte	0
-	.byte	0xc
+	.byte	0xd
 	.byte	0x24
 	.byte	0
 	.byte	0xb
@@ -499,7 +503,7 @@ counter:
 	.byte	0x8
 	.byte	0
 	.byte	0
-	.byte	0xd
+	.byte	0xe
 	.byte	0x34
 	.byte	0
 	.byte	0x3
@@ -518,7 +522,7 @@ counter:
 	.byte	0x18
 	.byte	0
 	.byte	0
-	.byte	0xe
+	.byte	0xf
 	.byte	0x2e
 	.byte	0x1
 	.byte	0x3f
@@ -545,7 +549,7 @@ counter:
 	.byte	0x13
 	.byte	0
 	.byte	0
-	.byte	0xf
+	.byte	0x10
 	.byte	0x34
 	.byte	0
 	.byte	0x3
@@ -562,7 +566,7 @@ counter:
 	.byte	0x17
 	.byte	0
 	.byte	0
-	.byte	0x10
+	.byte	0x11
 	.byte	0x34
 	.byte	0
 	.byte	0x3
@@ -579,34 +583,15 @@ counter:
 	.byte	0x17
 	.byte	0
 	.byte	0
-	.byte	0x11
-	.byte	0x1d
-	.byte	0x1
-	.byte	0x31
-	.byte	0x13
-	.byte	0x52
-	.byte	0x1
-	.byte	0x55
-	.byte	0x17
-	.byte	0x58
-	.byte	0xb
-	.byte	0x59
-	.byte	0xb
-	.byte	0x57
-	.byte	0xb
-	.byte	0x1
-	.byte	0x13
-	.byte	0
-	.byte	0
 	.byte	0x12
 	.byte	0x1d
 	.byte	0x1
 	.byte	0x31
 	.byte	0x13
-	.byte	0x52
+	.byte	0x11
 	.byte	0x1
-	.byte	0x55
-	.byte	0x17
+	.byte	0x12
+	.byte	0x6
 	.byte	0x58
 	.byte	0xb
 	.byte	0x59
@@ -616,26 +601,6 @@ counter:
 	.byte	0
 	.byte	0
 	.byte	0x13
-	.byte	0x48
-	.byte	0
-	.byte	0x7d
-	.byte	0x1
-	.byte	0x7f
-	.byte	0x13
-	.byte	0
-	.byte	0
-	.byte	0x14
-	.byte	0x48
-	.byte	0
-	.byte	0x7d
-	.byte	0x1
-	.byte	0x82,0x1
-	.byte	0x19
-	.byte	0x7f
-	.byte	0x13
-	.byte	0
-	.byte	0
-	.byte	0x15
 	.byte	0x2e
 	.byte	0x1
 	.byte	0x3
@@ -654,7 +619,7 @@ counter:
 	.byte	0x13
 	.byte	0
 	.byte	0
-	.byte	0x16
+	.byte	0x14
 	.byte	0x5
 	.byte	0
 	.byte	0x3
@@ -669,7 +634,7 @@ counter:
 	.byte	0x13
 	.byte	0
 	.byte	0
-	.byte	0x17
+	.byte	0x15
 	.byte	0x2e
 	.byte	0x1
 	.byte	0x3
@@ -719,7 +684,7 @@ counter:
 	.byte	0x1
 	.byte	0x5a
 	.byte	0
-.LLST3:
+.LLST2:
 	.byte	0x7
 	.4byte	.LVL4
 	.4byte	.LVL5
@@ -727,7 +692,7 @@ counter:
 	.byte	0x31
 	.byte	0x9f
 	.byte	0
-.LLST4:
+.LLST3:
 	.byte	0x7
 	.4byte	.LVL4
 	.4byte	.LVL5
@@ -749,23 +714,6 @@ counter:
 	.4byte	.Letext0-.Ltext0
 	.4byte	0
 	.4byte	0
-	.section	.debug_rnglists,"",@progbits
-.Ldebug_ranges0:
-	.4byte	.Ldebug_ranges3-.Ldebug_ranges2
-.Ldebug_ranges2:
-	.2byte	0x5
-	.byte	0x4
-	.byte	0
-	.4byte	0
-.LLRL2:
-	.byte	0x6
-	.4byte	.LBB16
-	.4byte	.LBE16
-	.byte	0x6
-	.4byte	.LBB21
-	.4byte	.LBE21
-	.byte	0
-.Ldebug_ranges3:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
@@ -773,6 +721,8 @@ counter:
 	.string	"user_irq_0_ev_pending_write"
 .LASF11:
 	.string	"uart_write"
+.LASF18:
+	.string	"GNU C17 12.1.0 -mabi=ilp32 -mtune=rocket -misa-spec=2.2 -march=rv32i -g -O1 -ffreestanding"
 .LASF22:
 	.string	"csr_write_simple"
 .LASF12:
@@ -789,8 +739,6 @@ counter:
 	.string	"irq_getmask"
 .LASF10:
 	.string	"unsigned int"
-.LASF18:
-	.string	"GNU C17 12.1.0 -mabi=ilp32 -mtune=rocket -misa-spec=2.2 -march=rv32i -g -O3 -ffreestanding"
 .LASF9:
 	.string	"long long unsigned int"
 .LASF5:

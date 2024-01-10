@@ -9,7 +9,7 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source design_1_caravel_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2856.551 ; gain = 0.023 ; free physical = 6380 ; free virtual = 10354
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2856.547 ; gain = 0.023 ; free physical = 4949 ; free virtual = 10381
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/SoCLab/final_project/vivado/vitis_prj/hls_caravel_ps'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/SoCLab/final_project/vivado/vitis_prj/hls_output_pin'.
@@ -22,9 +22,17 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 29913
+INFO: [Synth 8-7075] Helper process launched with PID 122552
+WARNING: [Synth 8-9971] redeclaration of ansi port 'io_in' is not allowed [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:1000]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'io_out' is not allowed [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:1001]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'io_oeb' is not allowed [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:1002]
+WARNING: [Synth 8-6901] identifier 'Dq_temp' is used before its declaration [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:1809]
+WARNING: [Synth 8-6901] identifier 'bdq' is used before its declaration [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:1811]
+WARNING: [Synth 8-9887] parameter declaration becomes local in 'blkRam' with formal parameter declaration list [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2559]
+WARNING: [Synth 8-9887] parameter declaration becomes local in 'blkRam' with formal parameter declaration list [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2560]
+WARNING: [Synth 8-9887] parameter declaration becomes local in 'blkRam' with formal parameter declaration list [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2561]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2856.551 ; gain = 0.000 ; free physical = 6141 ; free virtual = 10110
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2856.547 ; gain = 0.000 ; free physical = 3586 ; free virtual = 9018
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_caravel_0_0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_caravel_0_0/synth/design_1_caravel_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'caravel' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:77]
@@ -87,10 +95,94 @@ INFO: [Synth 8-6155] done synthesizing module 'uart_transmission' (0#1) [/home/u
 INFO: [Synth 8-6157] synthesizing module 'ctrl' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/uart_ctrl.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'ctrl' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/uart_ctrl.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'uart' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/uart.v:1]
-INFO: [Synth 8-6157] synthesizing module 'exmem' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:164]
-INFO: [Synth 8-6157] synthesizing module 'bram' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/bram.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'bram' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/bram.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'exmem' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:164]
+INFO: [Synth 8-6157] synthesizing module 'exmem_sdram' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:963]
+INFO: [Synth 8-6157] synthesizing module 'sdram_controller' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:1098]
+INFO: [Synth 8-6155] done synthesizing module 'sdram_controller' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:1098]
+INFO: [Synth 8-6157] synthesizing module 'sdr' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:1603]
+INFO: [Synth 8-6157] synthesizing module 'blkRam' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2557]
+INFO: [Synth 8-6155] done synthesizing module 'blkRam' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2557]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2045]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2048]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2087]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2120]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2122]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2122]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2122]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2122]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2123]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2123]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2123]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2123]
+INFO: [Synth 8-226] default block is never used [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2128]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2165]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2165]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2165]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2165]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2171]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2171]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2171]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2171]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2177]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2177]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2177]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2177]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2183]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2183]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2183]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2183]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2214]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2456]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2456]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2456]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2460]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2466]
+INFO: [Synth 8-6155] done synthesizing module 'sdr' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:1603]
+INFO: [Synth 8-6155] done synthesizing module 'exmem_sdram' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:963]
+WARNING: [Synth 8-7071] port 'la_data_in' of module 'exmem_sdram' is unconnected for instance 'mprj' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:149]
+WARNING: [Synth 8-7071] port 'la_data_out' of module 'exmem_sdram' is unconnected for instance 'mprj' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:149]
+WARNING: [Synth 8-7071] port 'la_oenb' of module 'exmem_sdram' is unconnected for instance 'mprj' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:149]
+WARNING: [Synth 8-7071] port 'io_in' of module 'exmem_sdram' is unconnected for instance 'mprj' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:149]
+WARNING: [Synth 8-7071] port 'io_out' of module 'exmem_sdram' is unconnected for instance 'mprj' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:149]
+WARNING: [Synth 8-7071] port 'io_oeb' of module 'exmem_sdram' is unconnected for instance 'mprj' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:149]
+WARNING: [Synth 8-7071] port 'irq' of module 'exmem_sdram' is unconnected for instance 'mprj' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:149]
+WARNING: [Synth 8-7023] instance 'mprj' of module 'exmem_sdram' has 17 connections declared, but only 10 given [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:149]
+INFO: [Synth 8-6157] synthesizing module 'MM' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:787]
+INFO: [Synth 8-6157] synthesizing module 'bram16' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/bram.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'bram16' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/bram.v:34]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:927]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:944]
+INFO: [Synth 8-6155] done synthesizing module 'MM' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:787]
+WARNING: [Synth 8-7071] port 'la_data_in' of module 'MM' is unconnected for instance 'MM0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:171]
+WARNING: [Synth 8-7071] port 'la_data_out' of module 'MM' is unconnected for instance 'MM0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:171]
+WARNING: [Synth 8-7071] port 'la_oenb' of module 'MM' is unconnected for instance 'MM0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:171]
+WARNING: [Synth 8-7071] port 'io_in' of module 'MM' is unconnected for instance 'MM0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:171]
+WARNING: [Synth 8-7071] port 'io_out' of module 'MM' is unconnected for instance 'MM0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:171]
+WARNING: [Synth 8-7071] port 'io_oeb' of module 'MM' is unconnected for instance 'MM0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:171]
+WARNING: [Synth 8-7071] port 'irq' of module 'MM' is unconnected for instance 'MM0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:171]
+WARNING: [Synth 8-7023] instance 'MM0' of module 'MM' has 17 connections declared, but only 10 given [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:171]
+INFO: [Synth 8-6157] synthesizing module 'Sort' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:347]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:550]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:550]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:449]
+INFO: [Synth 8-6155] done synthesizing module 'Sort' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:347]
+WARNING: [Synth 8-7071] port 'la_data_in' of module 'Sort' is unconnected for instance 'Sort0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:188]
+WARNING: [Synth 8-7071] port 'la_data_out' of module 'Sort' is unconnected for instance 'Sort0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:188]
+WARNING: [Synth 8-7071] port 'la_oenb' of module 'Sort' is unconnected for instance 'Sort0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:188]
+WARNING: [Synth 8-7071] port 'io_in' of module 'Sort' is unconnected for instance 'Sort0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:188]
+WARNING: [Synth 8-7071] port 'io_out' of module 'Sort' is unconnected for instance 'Sort0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:188]
+WARNING: [Synth 8-7071] port 'io_oeb' of module 'Sort' is unconnected for instance 'Sort0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:188]
+WARNING: [Synth 8-7071] port 'irq' of module 'Sort' is unconnected for instance 'Sort0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:188]
+WARNING: [Synth 8-7023] instance 'Sort0' of module 'Sort' has 17 connections declared, but only 10 given [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:188]
+INFO: [Synth 8-6157] synthesizing module 'fir' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:560]
+INFO: [Synth 8-6155] done synthesizing module 'fir' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:560]
+WARNING: [Synth 8-7071] port 'la_data_in' of module 'fir' is unconnected for instance 'fir0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:205]
+WARNING: [Synth 8-7071] port 'la_data_out' of module 'fir' is unconnected for instance 'fir0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:205]
+WARNING: [Synth 8-7071] port 'la_oenb' of module 'fir' is unconnected for instance 'fir0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:205]
+WARNING: [Synth 8-7071] port 'io_in' of module 'fir' is unconnected for instance 'fir0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:205]
+WARNING: [Synth 8-7071] port 'io_out' of module 'fir' is unconnected for instance 'fir0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:205]
+WARNING: [Synth 8-7071] port 'io_oeb' of module 'fir' is unconnected for instance 'fir0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:205]
+WARNING: [Synth 8-7071] port 'irq' of module 'fir' is unconnected for instance 'fir0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:205]
+WARNING: [Synth 8-7023] instance 'fir0' of module 'fir' has 17 connections declared, but only 10 given [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:205]
 INFO: [Synth 8-6155] done synthesizing module 'user_project_wrapper' (0#1) [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:32]
 INFO: [Synth 8-6157] synthesizing module 'housekeeping' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:99]
 INFO: [Synth 8-6157] synthesizing module 'boledu_fd_sc_hd__clkbuf_8' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:1503]
@@ -220,6 +312,20 @@ WARNING: [Synth 8-6014] Unused sequential element user_irq_ena_re_reg was remove
 WARNING: [Synth 8-6014] Unused sequential element memdat_reg was removed.  [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:8398]
 INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3936] Found unconnected internal register 'litespi_tx_mux_source_payload_mask_reg' and it is trimmed from '8' to '1' bits. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:2187]
+WARNING: [Synth 8-7137] Register Bank_reg in module sdr has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:2310]
+WARNING: [Synth 8-7137] Register Col_brst_reg in module sdr has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:1939]
+WARNING: [Synth 8-3848] Net la_data_out in module/entity MM does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:801]
+WARNING: [Synth 8-3848] Net io_out in module/entity MM does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:806]
+WARNING: [Synth 8-3848] Net io_oeb in module/entity MM does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:807]
+WARNING: [Synth 8-3848] Net irq in module/entity MM does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:810]
+WARNING: [Synth 8-3848] Net la_data_out in module/entity Sort does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:361]
+WARNING: [Synth 8-3848] Net io_out in module/entity Sort does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:366]
+WARNING: [Synth 8-3848] Net io_oeb in module/entity Sort does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:367]
+WARNING: [Synth 8-3848] Net irq in module/entity Sort does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:370]
+WARNING: [Synth 8-3848] Net la_data_out in module/entity fir does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:574]
+WARNING: [Synth 8-3848] Net io_out in module/entity fir does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:579]
+WARNING: [Synth 8-3848] Net io_oeb in module/entity fir does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:580]
+WARNING: [Synth 8-3848] Net irq in module/entity fir does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:583]
 WARNING: [Synth 8-3848] Net la_data_out in module/entity user_project_wrapper does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:61]
 WARNING: [Synth 8-7137] Register wb_dat_o_reg in module housekeeping has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:741]
 WARNING: [Synth 8-7137] Register mgmt_ena_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:232]
@@ -238,147 +344,147 @@ WARNING: [Synth 8-3848] Net mprj2_vcc_pwrgood in module/entity caravel does not 
 WARNING: [Synth 8-3848] Net mprj_vdd_pwrgood in module/entity caravel does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:462]
 WARNING: [Synth 8-3848] Net mprj2_vdd_pwrgood in module/entity caravel does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:463]
 WARNING: [Synth 8-3848] Net porb_h_in_nc in module/entity caravel does not have driver. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:481]
-WARNING: [Synth 8-7129] Port A0[31] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[30] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[29] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[28] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[27] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[26] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[25] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[24] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[23] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[22] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[21] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[20] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[19] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[18] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[17] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[16] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[15] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[14] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[13] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[12] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[11] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A0[10] in module bram is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wbs_sel_i[3] in module exmem is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wbs_sel_i[2] in module exmem is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wbs_sel_i[1] in module exmem is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wbs_sel_i[0] in module exmem is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_wb_sel[3] in module ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_wb_sel[2] in module ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_wb_sel[1] in module ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_wb_sel[0] in module ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[37] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[36] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[35] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[34] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[33] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[32] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[31] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[30] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[29] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[28] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[27] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[26] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[25] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[24] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[23] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[22] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[21] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[20] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[19] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[18] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[17] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[16] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[15] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[14] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[13] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[12] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[11] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[10] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[9] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[8] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[7] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[5] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[4] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[3] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[2] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[1] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_out[0] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[37] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[36] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[35] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[34] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[33] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[32] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[31] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[30] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[29] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[28] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[27] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[26] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[25] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[24] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[23] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[22] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[21] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[20] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[19] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[18] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[17] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[16] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[15] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[14] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[13] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[12] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[11] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[10] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[9] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[8] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[7] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[4] in module uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_oeb[3] in module uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[31] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[30] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[29] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[28] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[27] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[26] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[25] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[24] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[23] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[22] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[21] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[20] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[19] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[18] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[17] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[16] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[15] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[14] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[13] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[12] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[11] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[10] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[9] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[8] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[7] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[6] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[5] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A0[4] in module bram16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[127] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[126] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[125] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[124] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[123] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[122] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[121] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[120] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[119] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[118] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[117] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[116] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[115] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[114] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[113] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[112] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[111] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[110] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[109] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[108] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[107] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[106] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[105] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[104] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[103] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[102] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[101] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[100] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[99] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[98] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[97] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[96] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[95] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[94] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[93] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[92] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[91] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[90] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[89] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[88] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[87] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[86] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[85] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[84] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[83] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[82] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[81] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[80] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[79] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[78] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[77] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[76] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[75] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[74] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[73] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[72] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[71] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[70] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[69] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[68] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[67] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[66] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[65] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[64] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[63] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[62] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[61] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[60] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[59] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[58] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[57] in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_out[56] in module fir is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2856.551 ; gain = 0.000 ; free physical = 5594 ; free virtual = 9565
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2856.547 ; gain = 0.000 ; free physical = 3195 ; free virtual = 8635
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2856.551 ; gain = 0.000 ; free physical = 5569 ; free virtual = 9540
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2856.547 ; gain = 0.000 ; free physical = 3176 ; free virtual = 8617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2856.551 ; gain = 0.000 ; free physical = 5569 ; free virtual = 9540
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2856.547 ; gain = 0.000 ; free physical = 3176 ; free virtual = 8617
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.38 . Memory (MB): peak = 2856.551 ; gain = 0.000 ; free physical = 5515 ; free virtual = 9486
+Netlist sorting complete. Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.52 . Memory (MB): peak = 2856.547 ; gain = 0.000 ; free physical = 3293 ; free virtual = 8734
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2917.379 ; gain = 0.000 ; free physical = 5181 ; free virtual = 9152
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2941.375 ; gain = 0.000 ; free physical = 3079 ; free virtual = 8520
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:00.34 . Memory (MB): peak = 2917.379 ; gain = 0.000 ; free physical = 5148 ; free virtual = 9119
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.45 . Memory (MB): peak = 2941.375 ; gain = 0.000 ; free physical = 3070 ; free virtual = 8511
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 4507 ; free virtual = 8478
+Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2941.375 ; gain = 84.828 ; free physical = 2961 ; free virtual = 8407
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 4506 ; free virtual = 8478
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2941.375 ; gain = 84.828 ; free physical = 2961 ; free virtual = 8407
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 4506 ; free virtual = 8477
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2941.375 ; gain = 84.828 ; free physical = 2961 ; free virtual = 8407
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3936] Found unconnected internal register 'execute_to_memory_INSTRUCTION_reg' and it is trimmed from '32' to '30' bits. [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1990]
 INFO: [Synth 8-802] inferred FSM for state register 'switch_Fetcher_l362_reg' in module 'VexRiscv'
@@ -389,6 +495,9 @@ INFO: [Synth 8-802] inferred FSM for state register 'spimaster_state_reg' in mod
 INFO: [Synth 8-802] inferred FSM for state register 'grant_reg' in module 'mgmt_core'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_receive'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_transmission'
+INFO: [Synth 8-802] inferred FSM for state register 'mm_state_reg' in module 'MM'
+INFO: [Synth 8-802] inferred FSM for state register 'wb_state_reg' in module 'Sort'
+INFO: [Synth 8-802] inferred FSM for state register 'sort_cs_reg' in module 'Sort'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'housekeeping_spi'
 INFO: [Synth 8-802] inferred FSM for state register 'wbbd_state_reg' in module 'housekeeping'
 INFO: [Synth 8-802] inferred FSM for state register 'xfer_state_reg' in module 'housekeeping'
@@ -457,6 +566,39 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
+                    IDLE |                           000001 |                              000
+                      M1 |                           000010 |                              001
+                      M2 |                           000100 |                              010
+                      M3 |                           001000 |                              011
+                      M4 |                           010000 |                              100
+                  MM_OUT |                           100000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mm_state_reg' using encoding 'one-hot' in module 'MM'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                         00000001 |                             0000
+                   INPUT |                         00000010 |                             0001
+                   SORT0 |                         00000100 |                             0010
+                   SORT1 |                         00001000 |                             0011
+                   SORT2 |                         00010000 |                             0100
+                   SORT3 |                         00100000 |                             0101
+                   SORT4 |                         01000000 |                             0110
+                  OUTPUT |                         10000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sort_cs_reg' using encoding 'one-hot' in module 'Sort'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                             0000
+                    WAIT |                               01 |                             0111
+                  OUTPUT |                               10 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wb_state_reg' using encoding 'sequential' in module 'Sort'
+WARNING: [Synth 8-327] inferring latch for variable 'i' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
                  iSTATE0 |                            00001 |                              000
                  iSTATE1 |                            00010 |                              101
                  iSTATE3 |                            00100 |                              100
@@ -490,7 +632,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'xfer_state_reg' using enco
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'wbbd_state_reg' using encoding 'one-hot' in module 'housekeeping'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 4436 ; free virtual = 8410
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 2941.375 ; gain = 84.828 ; free physical = 4386 ; free virtual = 9830
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_0' (gpio_defaults_block) to 'inst/gpio_defaults_block_1'
 INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_4'
@@ -534,16 +676,19 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   33 Bit       Adders := 4     
 	   3 Input   32 Bit       Adders := 1     
-	   2 Input   32 Bit       Adders := 10    
+	   2 Input   32 Bit       Adders := 21    
 	   2 Input   30 Bit       Adders := 1     
 	   2 Input   24 Bit       Adders := 3     
+	   2 Input   23 Bit       Adders := 1     
 	   2 Input   16 Bit       Adders := 3     
+	   2 Input   11 Bit       Adders := 3     
+	   2 Input   10 Bit       Adders := 1     
 	   2 Input    9 Bit       Adders := 1     
 	   2 Input    8 Bit       Adders := 5     
 	   3 Input    8 Bit       Adders := 2     
-	   2 Input    6 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 3     
 	   2 Input    5 Bit       Adders := 4     
-	   2 Input    4 Bit       Adders := 12    
+	   2 Input    4 Bit       Adders := 17    
 	   2 Input    3 Bit       Adders := 8     
 	   2 Input    2 Bit       Adders := 2     
 	   2 Input    1 Bit       Adders := 3     
@@ -552,41 +697,47 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit         XORs := 12    
 +---Registers : 
 	               38 Bit    Registers := 1     
-	               32 Bit    Registers := 75    
+	               32 Bit    Registers := 122   
 	               30 Bit    Registers := 4     
 	               28 Bit    Registers := 1     
 	               26 Bit    Registers := 1     
 	               24 Bit    Registers := 2     
+	               23 Bit    Registers := 3     
 	               17 Bit    Registers := 1     
 	               16 Bit    Registers := 3     
-	               13 Bit    Registers := 78    
+	               13 Bit    Registers := 84    
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 6     
 	                9 Bit    Registers := 1     
-	                8 Bit    Registers := 25    
+	                8 Bit    Registers := 27    
 	                7 Bit    Registers := 2     
-	                6 Bit    Registers := 2     
-	                5 Bit    Registers := 6     
-	                4 Bit    Registers := 16    
-	                3 Bit    Registers := 50    
-	                2 Bit    Registers := 21    
-	                1 Bit    Registers := 937   
+	                6 Bit    Registers := 4     
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 29    
+	                3 Bit    Registers := 52    
+	                2 Bit    Registers := 29    
+	                1 Bit    Registers := 953   
++---Multipliers : 
+	              32x32  Multipliers := 1     
 +---RAMs : 
-	              32K Bit	(1024 X 32 bit)          RAMs := 1     
+	              32K Bit	(1024 X 32 bit)          RAMs := 4     
 	               8K Bit	(256 X 32 bit)          RAMs := 1     
 	               4K Bit	(128 X 32 bit)          RAMs := 1     
 	             1024 Bit	(32 X 32 bit)          RAMs := 1     
-	              512 Bit	(16 X 32 bit)          RAMs := 1     
+	              512 Bit	(16 X 32 bit)          RAMs := 5     
 	              160 Bit	(16 X 10 bit)          RAMs := 2     
 	               56 Bit	(2 X 28 bit)          RAMs := 1     
 +---Muxes : 
 	   6 Input   38 Bit        Muxes := 1     
 	   2 Input   38 Bit        Muxes := 2     
 	  97 Input   38 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 105   
-	   4 Input   32 Bit        Muxes := 20    
+	   2 Input   32 Bit        Muxes := 157   
+	   4 Input   32 Bit        Muxes := 21    
 	   3 Input   32 Bit        Muxes := 4     
 	   7 Input   32 Bit        Muxes := 3     
 	   5 Input   32 Bit        Muxes := 2     
 	   9 Input   32 Bit        Muxes := 2     
+	  12 Input   32 Bit        Muxes := 1     
 	  10 Input   32 Bit        Muxes := 1     
 	   2 Input   31 Bit        Muxes := 1     
 	   2 Input   30 Bit        Muxes := 3     
@@ -596,47 +747,65 @@ Detailed RTL Component Info :
 	   2 Input   25 Bit        Muxes := 1     
 	  97 Input   24 Bit        Muxes := 1     
 	   2 Input   24 Bit        Muxes := 2     
+	   2 Input   23 Bit        Muxes := 10    
+	  12 Input   23 Bit        Muxes := 1     
 	   2 Input   17 Bit        Muxes := 1     
-	   2 Input   16 Bit        Muxes := 1     
+	  12 Input   16 Bit        Muxes := 1     
 	   2 Input   14 Bit        Muxes := 2     
+	  12 Input   13 Bit        Muxes := 1     
+	   4 Input   13 Bit        Muxes := 4     
+	   2 Input   13 Bit        Muxes := 1     
+	   7 Input   13 Bit        Muxes := 1     
 	  98 Input   13 Bit        Muxes := 38    
-	   4 Input   13 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 30    
+	   2 Input   11 Bit        Muxes := 6     
+	  12 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 39    
 	   7 Input    8 Bit        Muxes := 5     
 	   4 Input    8 Bit        Muxes := 3     
 	   5 Input    8 Bit        Muxes := 1     
 	   3 Input    8 Bit        Muxes := 2     
+	   8 Input    8 Bit        Muxes := 1     
 	  10 Input    8 Bit        Muxes := 2     
 	   2 Input    7 Bit        Muxes := 5     
 	   5 Input    7 Bit        Muxes := 1     
 	 113 Input    7 Bit        Muxes := 4     
-	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 3     
 	   9 Input    6 Bit        Muxes := 1     
+	   6 Input    6 Bit        Muxes := 1     
 	   4 Input    6 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 5     
-	   3 Input    5 Bit        Muxes := 1     
+	   3 Input    5 Bit        Muxes := 2     
 	   4 Input    5 Bit        Muxes := 1     
-	   4 Input    4 Bit        Muxes := 2     
-	   5 Input    4 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 11    
+	   4 Input    4 Bit        Muxes := 4     
+	   5 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 25    
 	   6 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 87    
+	  12 Input    4 Bit        Muxes := 4     
+	   3 Input    4 Bit        Muxes := 2     
+	   8 Input    4 Bit        Muxes := 5     
+	   2 Input    3 Bit        Muxes := 92    
 	   5 Input    3 Bit        Muxes := 4     
 	   7 Input    3 Bit        Muxes := 3     
 	   3 Input    3 Bit        Muxes := 2     
-	   4 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 2     
+	  12 Input    3 Bit        Muxes := 3     
+	   6 Input    3 Bit        Muxes := 1     
 	  97 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 14    
+	   2 Input    2 Bit        Muxes := 25    
 	   7 Input    2 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 3     
 	   9 Input    2 Bit        Muxes := 1     
-	   3 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 1245  
-	   4 Input    1 Bit        Muxes := 31    
-	   3 Input    1 Bit        Muxes := 11    
+	   3 Input    2 Bit        Muxes := 2     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1304  
+	   4 Input    1 Bit        Muxes := 36    
+	   3 Input    1 Bit        Muxes := 26    
 	   5 Input    1 Bit        Muxes := 12    
 	   7 Input    1 Bit        Muxes := 20    
 	   9 Input    1 Bit        Muxes := 9     
+	  12 Input    1 Bit        Muxes := 27    
+	   6 Input    1 Bit        Muxes := 1     
 	  97 Input    1 Bit        Muxes := 10    
 	  98 Input    1 Bit        Muxes := 1     
 	  10 Input    1 Bit        Muxes := 10    
@@ -656,9 +825,149 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP temp1, operation Mode is: A*B.
+DSP Report: operator temp1 is absorbed into DSP temp1.
+DSP Report: operator temp1 is absorbed into DSP temp1.
+DSP Report: Generating DSP temp1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator temp1 is absorbed into DSP temp1.
+DSP Report: operator temp1 is absorbed into DSP temp1.
+DSP Report: Generating DSP temp1, operation Mode is: A*B.
+DSP Report: operator temp1 is absorbed into DSP temp1.
+DSP Report: operator temp1 is absorbed into DSP temp1.
+DSP Report: Generating DSP temp1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator temp1 is absorbed into DSP temp1.
+DSP Report: operator temp1 is absorbed into DSP temp1.
 INFO: [Synth 8-7082] The signal IBusCachedPlugin_cache/banks_0_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 INFO: [Synth 8-7082] The signal IBusCachedPlugin_cache/ways_0_tags_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (1 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 INFO: [Synth 8-3971] The signal "inst/\soc/core /VexRiscv/RegFilePlugin_regFile_reg" was recognized as a true dual port RAM template.
+WARNING: [Synth 8-3332] Sequential element (i) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__0) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__0/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__1) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__1/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__2) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__2/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__3) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__3/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__4) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__4/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__5) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__5/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__6) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__6/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__7) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__7/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__8) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__8/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__9) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__9/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__10) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__10/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__11) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__11/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__12) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__12/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__13) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__13/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__14) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__14/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__15) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__15/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__16) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__16/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__17) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__17/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__18) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__18/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__19) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__19/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__20) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__20/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__21) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__21/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__22) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__22/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__23) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__23/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__24) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__24/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__25) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__25/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__26) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__26/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__27) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__27/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__28) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__28/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__29) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__29/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+WARNING: [Synth 8-3332] Sequential element (i__30) is unused and will be removed from module Sort.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mprj/Sort0/i__30/Q' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/SoCLab/final_project/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_wrapper_uart.v:514]
 WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__1.
 WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__1.
 WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__1.
@@ -727,41 +1036,9 @@ WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and w
 WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__11.
 WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__12.
 WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__12.
-WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__12.
-WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__12.
-WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__12.
-WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__12.
-WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__13.
-WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__13.
-WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__13.
-WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__13.
-WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__13.
-WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__13.
-WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__14.
-WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__14.
-WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__14.
-WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__14.
-WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__14.
-WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__14.
-WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__15.
-WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__15.
-WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__15.
-WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__15.
-WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__15.
-WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__15.
-WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[1]_LDC) is unused and will be removed from module gpio_control_block__16.
-WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[1]_C) is unused and will be removed from module gpio_control_block__16.
-WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__16.
-WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__16.
-WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__17.
-WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__17.
-WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__17.
-WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__17.
-WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__17.
-WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__17.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:41 ; elapsed = 00:01:44 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 5761 ; free virtual = 9753
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:28 ; elapsed = 00:02:37 . Memory (MB): peak = 2941.375 ; gain = 84.828 ; free physical = 2390 ; free virtual = 7831
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -786,7 +1063,14 @@ Block RAM: Preliminary Mapping Report (see note below)
 |inst/\soc/core /RAM128   | RAM_reg                                | 128 x 32(READ_FIRST)   | W |   | 128 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
 |inst/\soc/core /VexRiscv | IBusCachedPlugin_cache/banks_0_reg     | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 |inst/\soc/core /VexRiscv | IBusCachedPlugin_cache/ways_0_tags_reg | 2 x 28(READ_FIRST)     | W |   | 2 x 28(WRITE_FIRST)    |   | R | Port A and B     | 1      | 0      | 
-|inst/mprj                | mprj/user_bram/RAM_reg                 | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/mprj/mprj           | user_bram/Bank0/RAM_reg                | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/mprj/mprj           | user_bram/Bank1/RAM_reg                | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/mprj/mprj           | user_bram/Bank2/RAM_reg                | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/mprj/mprj           | user_bram/Bank3/RAM_reg                | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/mprj/MM0            | Aram/RAM_reg                           | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst/mprj/MM0            | Bram/RAM_reg                           | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst/mprj/fir0           | TAPRAM/RAM_reg                         | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst/mprj/fir0           | DATARAM/RAM_reg                        | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 +-------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
@@ -800,6 +1084,18 @@ Distributed RAM: Preliminary Mapping Report (see note below)
 +----------------+---------------+-----------+----------------------+-------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -807,13 +1103,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:54 ; elapsed = 00:01:57 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 6214 ; free virtual = 10207
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:47 ; elapsed = 00:02:56 . Memory (MB): peak = 2941.375 ; gain = 84.828 ; free physical = 2575 ; free virtual = 8031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:57 ; elapsed = 00:02:01 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 6077 ; free virtual = 10070
+Finished Timing Optimization : Time (s): cpu = 00:02:56 ; elapsed = 00:03:06 . Memory (MB): peak = 2941.375 ; gain = 84.828 ; free physical = 3704 ; free virtual = 9166
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -827,7 +1123,14 @@ Block RAM: Final Mapping Report
 |inst/\soc/core /RAM128   | RAM_reg                                | 128 x 32(READ_FIRST)   | W |   | 128 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
 |inst/\soc/core /VexRiscv | IBusCachedPlugin_cache/banks_0_reg     | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 |inst/\soc/core /VexRiscv | IBusCachedPlugin_cache/ways_0_tags_reg | 2 x 28(READ_FIRST)     | W |   | 2 x 28(WRITE_FIRST)    |   | R | Port A and B     | 1      | 0      | 
-|inst/mprj                | mprj/user_bram/RAM_reg                 | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/mprj/mprj           | user_bram/Bank0/RAM_reg                | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/mprj/mprj           | user_bram/Bank1/RAM_reg                | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/mprj/mprj           | user_bram/Bank2/RAM_reg                | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/mprj/mprj           | user_bram/Bank3/RAM_reg                | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/mprj/MM0            | Aram/RAM_reg                           | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst/mprj/MM0            | Bram/RAM_reg                           | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst/mprj/fir0           | TAPRAM/RAM_reg                         | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst/mprj/fir0           | DATARAM/RAM_reg                        | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 +-------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 
@@ -849,9 +1152,16 @@ INFO: [Synth 8-7052] The timing for the instance inst/soc/core/RAM256/RAM_reg (i
 INFO: [Synth 8-7052] The timing for the instance inst/soc/core/RAM128/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/soc/core/VexRiscv/IBusCachedPlugin_cache/ways_0_tags_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/mprj/mprj/user_bram/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/mprj/mprj/user_bram/Bank0/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/mprj/mprj/user_bram/Bank1/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/mprj/mprj/user_bram/Bank2/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/mprj/mprj/user_bram/Bank3/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/mprj/MM0/Aram/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/mprj/MM0/Bram/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/mprj/fir0/TAPRAM/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/mprj/fir0/DATARAM/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:05 ; elapsed = 00:02:09 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 5553 ; free virtual = 9546
+Finished Technology Mapping : Time (s): cpu = 00:03:10 ; elapsed = 00:03:20 . Memory (MB): peak = 2973.383 ; gain = 116.836 ; free physical = 4841 ; free virtual = 10299
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -869,38 +1179,70 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'padframei_0' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2892' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2893' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2894' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2895' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2896' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2897' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2898' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2899' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2900' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2901' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2902' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2903' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2904' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2905' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2906' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2907' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2908' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2909' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2910' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2911' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2912' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2913' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2914' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2915' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2916' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2917' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2918' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2919' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2920' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2921' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2922' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'mprji_2923' to logic
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:17 ; elapsed = 00:02:20 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 4554 ; free virtual = 8547
+Finished IO Insertion : Time (s): cpu = 00:03:22 ; elapsed = 00:03:32 . Memory (MB): peak = 2979.320 ; gain = 122.773 ; free physical = 3826 ; free virtual = 9284
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:17 ; elapsed = 00:02:20 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 4554 ; free virtual = 8547
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:22 ; elapsed = 00:03:32 . Memory (MB): peak = 2979.320 ; gain = 122.773 ; free physical = 3826 ; free virtual = 9284
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:18 ; elapsed = 00:02:21 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 4676 ; free virtual = 8669
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:24 ; elapsed = 00:03:34 . Memory (MB): peak = 2979.320 ; gain = 122.773 ; free physical = 3810 ; free virtual = 9268
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:18 ; elapsed = 00:02:22 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 4674 ; free virtual = 8668
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:24 ; elapsed = 00:03:34 . Memory (MB): peak = 2979.320 ; gain = 122.773 ; free physical = 3810 ; free virtual = 9268
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:18 ; elapsed = 00:02:22 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 4655 ; free virtual = 8649
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:25 ; elapsed = 00:03:35 . Memory (MB): peak = 2979.320 ; gain = 122.773 ; free physical = 3806 ; free virtual = 9264
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:19 ; elapsed = 00:02:22 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 4654 ; free virtual = 8647
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:25 ; elapsed = 00:03:35 . Memory (MB): peak = 2979.320 ; gain = 122.773 ; free physical = 3805 ; free virtual = 9263
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -924,6 +1266,16 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | A*B          | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | PCIN>>17+A*B | 0      | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
 Report BlackBoxes: 
 +-+--------------+----------+
 | |BlackBox name |Instances |
@@ -934,51 +1286,52 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |CARRY4   |   156|
-|2     |LUT1     |   212|
-|3     |LUT2     |   359|
-|4     |LUT3     |   265|
-|5     |LUT4     |   699|
-|6     |LUT5     |   809|
-|7     |LUT6     |  1832|
-|8     |MUXF7    |   170|
-|9     |MUXF8    |    47|
-|10    |RAM32M   |     4|
-|11    |RAMB18E1 |     6|
-|13    |RAMB36E1 |     1|
-|14    |SRL16E   |    38|
-|15    |FDCE     |  1020|
-|16    |FDPE     |   274|
-|17    |FDRE     |  2546|
-|18    |FDSE     |    87|
-|19    |LDC      |    75|
+|1     |CARRY4   |   306|
+|2     |DSP48E1  |     3|
+|3     |LUT1     |   404|
+|4     |LUT2     |   643|
+|5     |LUT3     |   685|
+|6     |LUT4     |   894|
+|7     |LUT5     |  1401|
+|8     |LUT6     |  2971|
+|9     |MUXF7    |   198|
+|10    |MUXF8    |    47|
+|11    |RAM32M   |     4|
+|12    |RAMB18E1 |    10|
+|14    |RAMB36E1 |     4|
+|15    |SRL16E   |    38|
+|16    |FDCE     |  1230|
+|17    |FDPE     |   277|
+|18    |FDRE     |  3956|
+|19    |FDSE     |    92|
+|20    |LDC      |    75|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:19 ; elapsed = 00:02:22 . Memory (MB): peak = 2917.379 ; gain = 60.828 ; free physical = 4651 ; free virtual = 8645
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:25 ; elapsed = 00:03:35 . Memory (MB): peak = 2979.320 ; gain = 122.773 ; free physical = 3804 ; free virtual = 9262
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 1363 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:11 ; elapsed = 00:02:15 . Memory (MB): peak = 2917.379 ; gain = 0.000 ; free physical = 4687 ; free virtual = 8681
-Synthesis Optimization Complete : Time (s): cpu = 00:02:19 ; elapsed = 00:02:22 . Memory (MB): peak = 2917.387 ; gain = 60.828 ; free physical = 4686 ; free virtual = 8680
+Synthesis finished with 0 errors, 129 critical warnings and 3207 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:16 ; elapsed = 00:03:27 . Memory (MB): peak = 2979.320 ; gain = 37.945 ; free physical = 3852 ; free virtual = 9310
+Synthesis Optimization Complete : Time (s): cpu = 00:03:25 ; elapsed = 00:03:36 . Memory (MB): peak = 2979.328 ; gain = 122.773 ; free physical = 3852 ; free virtual = 9310
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2917.387 ; gain = 0.000 ; free physical = 4741 ; free virtual = 8735
-INFO: [Netlist 29-17] Analyzing 459 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.3 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2979.328 ; gain = 0.000 ; free physical = 3859 ; free virtual = 9317
+INFO: [Netlist 29-17] Analyzing 647 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2917.387 ; gain = 0.000 ; free physical = 4612 ; free virtual = 8606
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2979.328 ; gain = 0.000 ; free physical = 3670 ; free virtual = 9128
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 79 instances were transformed.
   LDC => LDCE: 75 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
 
-Synth Design complete, checksum: aeacda1a
+Synth Design complete, checksum: 34333047
 INFO: [Common 17-83] Releasing license: Synthesis
-162 Infos, 339 Warnings, 1 Critical Warnings and 0 Errors encountered.
+193 Infos, 428 Warnings, 129 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:35 ; elapsed = 00:02:34 . Memory (MB): peak = 2917.387 ; gain = 60.836 ; free physical = 4778 ; free virtual = 8772
+synth_design: Time (s): cpu = 00:03:43 ; elapsed = 00:03:49 . Memory (MB): peak = 2979.328 ; gain = 122.781 ; free physical = 3872 ; free virtual = 9330
 INFO: [Common 17-1381] The checkpoint '/home/ubuntu/SoCLab/final_project/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_caravel_0_0_synth_1/design_1_caravel_0_0.dcp' has been generated.
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Coretcl 2-1174] Renamed 54 cell refs.
+INFO: [Coretcl 2-1174] Renamed 66 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/ubuntu/SoCLab/final_project/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_caravel_0_0_synth_1/design_1_caravel_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_caravel_0_0_utilization_synth.rpt -pb design_1_caravel_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 28 11:01:52 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 10 04:06:44 2024...

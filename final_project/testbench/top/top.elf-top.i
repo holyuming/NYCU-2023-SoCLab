@@ -1735,6 +1735,7 @@ void main()
 
  (*(volatile uint32_t*)0x2600000c) = 0xAB400000;
  int *tmp = qsort();
+ (*(volatile uint32_t*)0x2600000c) = 0xAB710000;
  (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+1) << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+2) << 16;
@@ -1745,11 +1746,11 @@ void main()
  (*(volatile uint32_t*)0x2600000c) = *(tmp+7) << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+8) << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+9) << 16;
- (*(volatile uint32_t*)0x2600000c) = 0xAB710000;
 
 
  (*(volatile uint32_t*)0x2600000c) = 0xAB400000;
  tmp = fir();
+ (*(volatile uint32_t*)0x2600000c) = 0xAB610000;
  (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+1) << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+2) << 16;
@@ -1761,11 +1762,11 @@ void main()
  (*(volatile uint32_t*)0x2600000c) = *(tmp+8) << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+9) << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+10) << 16;
- (*(volatile uint32_t*)0x2600000c) = 0xAB610000;
 
 
  (*(volatile uint32_t*)0x2600000c) = 0xAB400000;
  tmp = matmul();
+ (*(volatile uint32_t*)0x2600000c) = 0xAB510000;
  (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+1) << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+2) << 16;
@@ -1782,5 +1783,5 @@ void main()
  (*(volatile uint32_t*)0x2600000c) = *(tmp+13) << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+14) << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+15) << 16;
- (*(volatile uint32_t*)0x2600000c) = 0xAB510000;
+ (*(volatile uint32_t*)0x2600000c) = 0xAB910000;
 }

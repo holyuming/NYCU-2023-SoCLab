@@ -16,7 +16,7 @@ Linker script and memory map
 
                 0x0000000000000000                __DYNAMIC = 0x0
 
-.text           0x0000000010000000      0x208
+.text           0x0000000010000000      0x52c
                 0x0000000010000000                _ftext = .
  *crt0*(.text)
  .text          0x0000000010000000      0x148 top.elf-crt0_vex.o
@@ -25,38 +25,35 @@ Linker script and memory map
  *crt0*(.text)
  *(.text.isr)
                 0x0000000010000148                _etext = .
- .text          0x0000000010000148       0x3c top.elf-isr.o
+ .text          0x0000000010000148       0x40 top.elf-isr.o
                 0x0000000010000148                isr
- .text          0x0000000010000184        0x0 top.elf-func.o
- .text          0x0000000010000184       0x84 top.elf-top.o
-                0x0000000010000184                putchar
-                0x00000000100001c0                print
+ .text          0x0000000010000188        0x0 top.elf-func.o
+ .text          0x0000000010000188      0x3a4 top.elf-top.o
+                0x0000000010000188                putchar
+                0x00000000100001d4                print
+                0x000000001000020c                main
 
-.mprj           0x0000000010000208       0xf8
- .mprj          0x0000000010000208       0xf8 top.elf-func.o
-                0x0000000010000208                uart_write
-                0x0000000010000220                uart_write_char
-                0x000000001000025c                uart_write_string
-                0x00000000100002a8                uart_read_char
-                0x00000000100002d8                uart_read
+.mprj           0x000000001000052c      0x108
+ .mprj          0x000000001000052c      0x108 top.elf-func.o
+                0x000000001000052c                uart_write
+                0x0000000010000548                uart_write_char
+                0x0000000010000594                uart_write_string
+                0x00000000100005cc                uart_read_char
+                0x0000000010000604                uart_read
 
-.text.startup   0x0000000010000300      0x314
- .text.startup  0x0000000010000300      0x314 top.elf-top.o
-                0x0000000010000300                main
+.rela.dyn       0x0000000010000634        0x0
+ .rela.text     0x0000000010000634        0x0 top.elf-crt0_vex.o
 
-.rela.dyn       0x0000000010000614        0x0
- .rela.text     0x0000000010000614        0x0 top.elf-crt0_vex.o
-
-.rodata         0x0000000010000614        0x4
-                0x0000000010000618                . = ALIGN (0x8)
- *fill*         0x0000000010000614        0x4 
-                0x0000000010000618                _frodata = .
+.rodata         0x0000000010000634        0x4
+                0x0000000010000638                . = ALIGN (0x8)
+ *fill*         0x0000000010000634        0x4 
+                0x0000000010000638                _frodata = .
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  *(.rodata1)
-                0x0000000010000618                . = ALIGN (0x8)
-                0x0000000010000618                _erodata = .
+                0x0000000010000638                . = ALIGN (0x8)
+                0x0000000010000638                _erodata = .
 
-.data           0x0000000000000000        0x8 load address 0x0000000010000618
+.data           0x0000000000000000        0x8 load address 0x0000000010000638
                 0x0000000000000000                . = ALIGN (0x8)
                 0x0000000000000000                _fdata = .
  *(.data .data.* .gnu.linkonce.d.*)
@@ -73,7 +70,7 @@ Linker script and memory map
  *fill*         0x0000000000000004        0x4 
                 0x0000000000000008                _edata = .
 
-.bss            0x0000000000000008       0x98 load address 0x0000000010000620
+.bss            0x0000000000000008       0x98 load address 0x0000000010000640
                 0x0000000000000008                . = ALIGN (0x8)
                 0x0000000000000008                _fbss = .
  *(.dynsbss)
@@ -94,19 +91,19 @@ Linker script and memory map
                 0x00000000000000a0                _ebss = .
                 0x00000000000000a0                _end = .
 
-.mprjram        0x0000000038000000      0x324 load address 0x0000000010000620
+.mprjram        0x0000000038000000      0x270 load address 0x0000000010000640
                 0x0000000038000000                . = ALIGN (0x8)
                 0x0000000038000000                _fsram = .
  *libgcc.a:*(.text .text.*)
- .mprjram       0x0000000038000000      0x324 top.elf-func.o
+ .mprjram       0x0000000038000000      0x270 top.elf-func.o
                 0x0000000038000000                matmul
-                0x0000000038000168                fir
-                0x000000003800026c                qsort
+                0x00000000380000e8                fir
+                0x00000000380001ec                qsort
                 0x0000000000000600                PROVIDE (_fstack = (ORIGIN (dff2) + LENGTH (dff2)))
-                0x0000000010000618                PROVIDE (_fdata_rom = LOADADDR (.data))
+                0x0000000010000638                PROVIDE (_fdata_rom = LOADADDR (.data))
                 [!provide]                        PROVIDE (_edata_rom = (LOADADDR (.data) + SIZEOF (.data)))
-                0x0000000038000324                PROVIDE (_esram = (ORIGIN (mprjram) + SIZEOF (.mprjram)))
-                0x0000000010000620                PROVIDE (_esram_rom = LOADADDR (.mprjram))
+                0x0000000038000270                PROVIDE (_esram = (ORIGIN (mprjram) + SIZEOF (.mprjram)))
+                0x0000000010000640                PROVIDE (_esram_rom = LOADADDR (.mprjram))
 LOAD top.elf-crt0_vex.o
 LOAD top.elf-isr.o
 LOAD top.elf-func.o
@@ -136,11 +133,11 @@ OUTPUT(top.elf elf32-littleriscv)
  .comment       0x000000000000001b       0x1c top.elf-func.o
  .comment       0x000000000000001b       0x1c top.elf-top.o
 
-.debug_line     0x0000000000000000     0x1bb0
+.debug_line     0x0000000000000000     0x15d7
  .debug_line    0x0000000000000000      0x20a top.elf-crt0_vex.o
- .debug_line    0x000000000000020a      0x121 top.elf-isr.o
- .debug_line    0x000000000000032b      0xd82 top.elf-func.o
- .debug_line    0x00000000000010ad      0xb03 top.elf-top.o
+ .debug_line    0x000000000000020a      0x11d top.elf-isr.o
+ .debug_line    0x0000000000000327      0x972 top.elf-func.o
+ .debug_line    0x0000000000000c99      0x93e top.elf-top.o
 
 .debug_line_str
                 0x0000000000000000       0xe1
@@ -156,19 +153,19 @@ OUTPUT(top.elf elf32-littleriscv)
                 0x00000000000000d4        0xd top.elf-top.o
                                          0xf6 (size before relaxing)
 
-.debug_info     0x0000000000000000      0x725
+.debug_info     0x0000000000000000      0x6ac
  .debug_info    0x0000000000000000       0x25 top.elf-crt0_vex.o
- .debug_info    0x0000000000000025      0x1cc top.elf-isr.o
- .debug_info    0x00000000000001f1      0x29a top.elf-func.o
- .debug_info    0x000000000000048b      0x29a top.elf-top.o
+ .debug_info    0x0000000000000025      0x1cd top.elf-isr.o
+ .debug_info    0x00000000000001f2      0x25e top.elf-func.o
+ .debug_info    0x0000000000000450      0x25c top.elf-top.o
 
-.debug_abbrev   0x0000000000000000      0x505
+.debug_abbrev   0x0000000000000000      0x479
  .debug_abbrev  0x0000000000000000       0x14 top.elf-crt0_vex.o
- .debug_abbrev  0x0000000000000014      0x170 top.elf-isr.o
- .debug_abbrev  0x0000000000000184      0x181 top.elf-func.o
- .debug_abbrev  0x0000000000000305      0x200 top.elf-top.o
+ .debug_abbrev  0x0000000000000014      0x150 top.elf-isr.o
+ .debug_abbrev  0x0000000000000164      0x147 top.elf-func.o
+ .debug_abbrev  0x00000000000002ab      0x1ce top.elf-top.o
 
-.debug_aranges  0x0000000000000000       0xc0
+.debug_aranges  0x0000000000000000       0xb8
  .debug_aranges
                 0x0000000000000000       0x20 top.elf-crt0_vex.o
  .debug_aranges
@@ -176,7 +173,7 @@ OUTPUT(top.elf elf32-littleriscv)
  .debug_aranges
                 0x0000000000000040       0x58 top.elf-func.o
  .debug_aranges
-                0x0000000000000098       0x28 top.elf-top.o
+                0x0000000000000098       0x20 top.elf-top.o
 
 .debug_str      0x0000000000000000      0x20b
  .debug_str     0x0000000000000000       0x56 top.elf-crt0_vex.o
@@ -188,24 +185,20 @@ OUTPUT(top.elf elf32-littleriscv)
                                         0x156 (size before relaxing)
 
 .debug_loclists
-                0x0000000000000000      0x2c0
+                0x0000000000000000      0x1c0
  .debug_loclists
                 0x0000000000000000       0x52 top.elf-isr.o
  .debug_loclists
-                0x0000000000000052      0x1be top.elf-func.o
+                0x0000000000000052       0xa2 top.elf-func.o
  .debug_loclists
-                0x0000000000000210       0xb0 top.elf-top.o
+                0x00000000000000f4       0xcc top.elf-top.o
+
+.debug_frame    0x0000000000000000      0x15c
+ .debug_frame   0x0000000000000000       0x2c top.elf-isr.o
+ .debug_frame   0x000000000000002c       0xb4 top.elf-func.o
+ .debug_frame   0x00000000000000e0       0x7c top.elf-top.o
 
 .debug_rnglists
-                0x0000000000000000       0xf1
+                0x0000000000000000       0x55
  .debug_rnglists
-                0x0000000000000000       0x1f top.elf-isr.o
- .debug_rnglists
-                0x000000000000001f       0x84 top.elf-func.o
- .debug_rnglists
-                0x00000000000000a3       0x4e top.elf-top.o
-
-.debug_frame    0x0000000000000000      0x128
- .debug_frame   0x0000000000000000       0x2c top.elf-isr.o
- .debug_frame   0x000000000000002c       0xa4 top.elf-func.o
- .debug_frame   0x00000000000000d0       0x58 top.elf-top.o
+                0x0000000000000000       0x55 top.elf-func.o

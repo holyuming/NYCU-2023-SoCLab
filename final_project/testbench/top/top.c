@@ -116,6 +116,7 @@ void main()
 	// qs
 	reg_mprj_datal = 0xAB400000;
 	int *tmp = qsort();
+	reg_mprj_datal = 0xAB710000;
 	reg_mprj_datal = *tmp << 16;
 	reg_mprj_datal = *(tmp+1) << 16;
 	reg_mprj_datal = *(tmp+2) << 16;
@@ -126,11 +127,11 @@ void main()
 	reg_mprj_datal = *(tmp+7) << 16;
 	reg_mprj_datal = *(tmp+8) << 16;
 	reg_mprj_datal = *(tmp+9) << 16;	
-	reg_mprj_datal = 0xAB710000;
 
 	// fir
 	reg_mprj_datal = 0xAB400000;
 	tmp = fir();
+	reg_mprj_datal = 0xAB610000;
 	reg_mprj_datal = *tmp << 16;
 	reg_mprj_datal = *(tmp+1) << 16;
 	reg_mprj_datal = *(tmp+2) << 16;
@@ -142,11 +143,11 @@ void main()
 	reg_mprj_datal = *(tmp+8) << 16;
 	reg_mprj_datal = *(tmp+9) << 16;
 	reg_mprj_datal = *(tmp+10) << 16;
-	reg_mprj_datal = 0xAB610000;
 
 	// mm
 	reg_mprj_datal = 0xAB400000;
 	tmp = matmul();
+	reg_mprj_datal = 0xAB510000;
 	reg_mprj_datal = *tmp << 16;
 	reg_mprj_datal = *(tmp+1) << 16;
 	reg_mprj_datal = *(tmp+2) << 16;
@@ -163,6 +164,6 @@ void main()
 	reg_mprj_datal = *(tmp+13) << 16;	
 	reg_mprj_datal = *(tmp+14) << 16;	
 	reg_mprj_datal = *(tmp+15) << 16;	
-	reg_mprj_datal = 0xAB510000;
+	reg_mprj_datal = 0xAB910000;
 }
 

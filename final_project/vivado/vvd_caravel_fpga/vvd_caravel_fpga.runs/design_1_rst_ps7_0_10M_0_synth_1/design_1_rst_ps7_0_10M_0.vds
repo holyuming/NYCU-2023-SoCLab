@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Dec 28 11:02:31 2023
-# Process ID: 30605
+# Start of session at: Wed Jan 10 04:06:49 2024
+# Process ID: 123544
 # Current directory: /home/ubuntu/SoCLab/final_project/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_rst_ps7_0_10M_0_synth_1
 # Command line: vivado -log design_1_rst_ps7_0_10M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_rst_ps7_0_10M_0.tcl
 # Log file: /home/ubuntu/SoCLab/final_project/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_rst_ps7_0_10M_0_synth_1/design_1_rst_ps7_0_10M_0.vds
@@ -11,7 +11,7 @@
 # Running On: ubuntu2004, OS: Linux, CPU Frequency: 3407.998 MHz, CPU Physical cores: 4, Host memory: 14459 MB
 #-----------------------------------------------------------
 source design_1_rst_ps7_0_10M_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2856.520 ; gain = 0.023 ; free physical = 6327 ; free virtual = 10318
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2857.520 ; gain = 0.023 ; free physical = 3994 ; free virtual = 9459
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/SoCLab/final_project/vivado/vitis_prj/hls_caravel_ps'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/SoCLab/final_project/vivado/vitis_prj/hls_output_pin'.
@@ -24,9 +24,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 30655
+INFO: [Synth 8-7075] Helper process launched with PID 123555
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2856.520 ; gain = 0.000 ; free physical = 4691 ; free virtual = 8686
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2857.520 ; gain = 0.000 ; free physical = 2979 ; free virtual = 8449
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_10M_0' [/home/ubuntu/SoCLab/final_project/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_10M_0/synth/design_1_rst_ps7_0_10M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -81,18 +81,18 @@ WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module cdc_sync is either uncon
 WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port scndry_resetn in module cdc_sync is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2856.520 ; gain = 0.000 ; free physical = 4734 ; free virtual = 8730
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2857.520 ; gain = 0.000 ; free physical = 3325 ; free virtual = 8796
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2856.520 ; gain = 0.000 ; free physical = 4732 ; free virtual = 8729
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2857.520 ; gain = 0.000 ; free physical = 3323 ; free virtual = 8794
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2856.520 ; gain = 0.000 ; free physical = 4732 ; free virtual = 8729
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2857.520 ; gain = 0.000 ; free physical = 3323 ; free virtual = 8794
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2856.520 ; gain = 0.000 ; free physical = 4732 ; free virtual = 8729
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2857.520 ; gain = 0.000 ; free physical = 3324 ; free virtual = 8795
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -109,33 +109,33 @@ Parsing XDC File [/home/ubuntu/SoCLab/final_project/vivado/vvd_caravel_fpga/vvd_
 Finished Parsing XDC File [/home/ubuntu/SoCLab/final_project/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_rst_ps7_0_10M_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2888.535 ; gain = 0.000 ; free physical = 4604 ; free virtual = 8601
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2889.535 ; gain = 0.000 ; free physical = 4426 ; free virtual = 9891
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2888.535 ; gain = 0.000 ; free physical = 4604 ; free virtual = 8601
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2889.535 ; gain = 0.000 ; free physical = 4425 ; free virtual = 9891
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 4980 ; free virtual = 8976
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 5450 ; free virtual = 10910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 4980 ; free virtual = 8976
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 5450 ; free virtual = 10910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/ubuntu/SoCLab/final_project/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_rst_ps7_0_10M_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 4980 ; free virtual = 8976
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 5449 ; free virtual = 10910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 4952 ; free virtual = 8949
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 5429 ; free virtual = 10890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -171,25 +171,25 @@ WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GE
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 6110 ; free virtual = 10111
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 5376 ; free virtual = 10841
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 5877 ; free virtual = 9878
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 4603 ; free virtual = 10067
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 5877 ; free virtual = 9878
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 4600 ; free virtual = 10065
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 5863 ; free virtual = 9864
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 4580 ; free virtual = 10045
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -207,37 +207,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 6150 ; free virtual = 10150
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 3788 ; free virtual = 9253
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 6150 ; free virtual = 10150
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 3787 ; free virtual = 9252
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 6150 ; free virtual = 10150
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 3786 ; free virtual = 9251
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 6150 ; free virtual = 10150
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 3786 ; free virtual = 9251
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 6150 ; free virtual = 10150
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 3785 ; free virtual = 9250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 6150 ; free virtual = 10150
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 3785 ; free virtual = 9250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -265,18 +265,18 @@ Report Cell Usage:
 |10    |FDSE  |     4|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 2888.535 ; gain = 32.016 ; free physical = 6150 ; free virtual = 10150
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 2889.535 ; gain = 32.016 ; free physical = 3784 ; free virtual = 9249
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2888.535 ; gain = 0.000 ; free physical = 6214 ; free virtual = 10215
-Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 2888.543 ; gain = 32.016 ; free physical = 6214 ; free virtual = 10215
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2889.535 ; gain = 0.000 ; free physical = 3812 ; free virtual = 9277
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 2889.543 ; gain = 32.016 ; free physical = 3812 ; free virtual = 9277
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2888.543 ; gain = 0.000 ; free physical = 6210 ; free virtual = 10211
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2889.543 ; gain = 0.000 ; free physical = 3811 ; free virtual = 9276
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2888.543 ; gain = 0.000 ; free physical = 6259 ; free virtual = 10255
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2889.543 ; gain = 0.000 ; free physical = 3753 ; free virtual = 9218
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
@@ -286,10 +286,10 @@ Synth Design complete, checksum: 116f5ef6
 INFO: [Common 17-83] Releasing license: Synthesis
 49 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:04 . Memory (MB): peak = 2888.543 ; gain = 32.023 ; free physical = 6454 ; free virtual = 10450
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:03 . Memory (MB): peak = 2889.543 ; gain = 32.023 ; free physical = 3926 ; free virtual = 9391
 INFO: [Common 17-1381] The checkpoint '/home/ubuntu/SoCLab/final_project/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_rst_ps7_0_10M_0_synth_1/design_1_rst_ps7_0_10M_0.dcp' has been generated.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_rst_ps7_0_10M_0, cache-ID = cf0996aadd0f067d
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/ubuntu/SoCLab/final_project/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_rst_ps7_0_10M_0_synth_1/design_1_rst_ps7_0_10M_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_rst_ps7_0_10M_0_utilization_synth.rpt -pb design_1_rst_ps7_0_10M_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 28 11:03:58 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 10 04:08:15 2024...

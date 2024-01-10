@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
--- Date        : Thu Dec 28 11:03:57 2023
+-- Date        : Wed Jan 10 04:08:15 2024
 -- Host        : ubuntu2004 running 64-bit Ubuntu 20.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/ubuntu/SoCLab/final_project/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_10M_0/design_1_rst_ps7_0_10M_0_stub.vhdl

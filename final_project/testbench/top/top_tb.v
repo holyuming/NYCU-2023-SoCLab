@@ -140,8 +140,8 @@ module top_tb;
 	`endif 
 
 	initial begin
-		// $dumpfile("top.vcd");
-		// $dumpvars(0, top_tb);
+		$dumpfile("top.vcd");
+		$dumpvars(0, top_tb);
 
 		// Repeat cycles of 1000 clock edges as needed to complete testbench
 		repeat (150) begin
@@ -179,6 +179,8 @@ module top_tb;
 		qs_latency = $time;
 		$display("start time", $time);
 		$display("LA qs 1 started");
+		wait(checkbits == 16'hAB71);
+		qs_latency = $time - qs_latency;
 
 		wait(checkbits == 16'd40);
 		$display("Received %d", checkbits);
@@ -202,9 +204,7 @@ module top_tb;
 		$display("Received %d", checkbits);
 		
 
-		wait(checkbits == 16'hAB71);
 		$display("LA qs 2 passed");
-		qs_latency = $time - qs_latency;
 		$display("QS latency: %10d", qs_latency / 25.0);
 
 		// fir
@@ -212,6 +212,8 @@ module top_tb;
 		fir_latency = $time;
 		$display("start time", $time);
 		$display("LA fir 1 started");
+		wait(checkbits == 16'hAB61);
+		fir_latency = $time - fir_latency;
 
 		wait($signed(checkbits) == 0); 
 		$display("Received: %5d", $signed(checkbits));
@@ -236,9 +238,7 @@ module top_tb;
 		wait($signed(checkbits) == 1098); 
 		$display("Received: %5d", $signed(checkbits));
 			
-		wait(checkbits == 16'hAB61);
 		$display("LA fir 2 passed");
-		fir_latency = $time - fir_latency;
 		$display("fir latency: %10d", fir_latency / 25.0);
 
 		// mm
@@ -246,44 +246,47 @@ module top_tb;
 		mm_latency = $time;
 		$display("start time", $time);
 		$display("LA mm 1 started");
-
-		wait(checkbits == 16'h003E); // 62
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h0044); // 68
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h004A); // 74
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h0050); // 80
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h003E); // 62
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h0044); // 68
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h004A); // 74
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h0050); // 80
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h003E); // 62
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h0044); // 68
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h004A); // 74
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h0050); // 80
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h003E); // 62
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h0044); // 68
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h004A); // 74
-		$display("Received: %5d", checkbits);
-		wait(checkbits == 16'h0050); // 80
-		$display("Received: %5d", checkbits);
-
 		wait(checkbits == 16'hAB51);
-		$display("LA mm 2 passed");
 		mm_latency = $time - mm_latency;
+
+		wait(checkbits == 16'h003E); // 62
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h0044); // 68
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h004A); // 74
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h0050); // 80
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h003E); // 62
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h0044); // 68
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h004A); // 74
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h0050); // 80
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h003E); // 62
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h0044); // 68
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h004A); // 74
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h0050); // 80
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h003E); // 62
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h0044); // 68
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h004A); // 74
+		$display("Received: %5d", checkbits);
+		wait(checkbits == 16'h0050); // 80
+		$display("Received: %5d", checkbits);
+
+		$display("LA mm 2 passed");
 		$display("MM latency: %10d", mm_latency / 25.0);
+
+		// task finished
+		wait(checkbits == 16'hAB91);
 	end endtask
 
 	task test_mm; begin

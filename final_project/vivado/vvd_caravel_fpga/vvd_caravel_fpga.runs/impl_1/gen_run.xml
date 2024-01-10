@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1703778916">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1704877229">
   <File Type="ROUTE-PWR-RPX" Name="design_1_wrapper_power_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="design_1_wrapper_methodology_drc_routed.pb"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="design_1_wrapper_methodology_drc_routed.rpx"/>
@@ -281,18 +281,18 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_10M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_spiflash_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_output_pin_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_10M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_uartlite_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_intc_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_blk_mem_gen_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_us_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_read_romcode_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_caravel_ps_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_caravel_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_us_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_intc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_output_pin_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
 </GenRun>
