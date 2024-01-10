@@ -98,7 +98,7 @@ Congrats
 
 ```
 
-### Last, we add instruction prefetch scheme using sdram_controller to boost instrucion read latency.<br>
+### Last, we add instruction prefetch technique modifying `sdram_controller.v` to minimize instrucion read latency.<br>
 ```sh
 Reading top.hex
 top.hex loaded into memory
@@ -158,9 +158,10 @@ Congrats
 ```
 
 ### Conclusion: We can see that latency for each workload drops significantly.
+Note: latency is calculated from checkbits 0XAB40 to checkbits to 0XAB51 for each workload.
 
-|   Task   | Latency w/o Hardware | Latency w/ Hardware | Hardware + Prefetch | Compiler -O1 |
-|:--------:|:--------------------:|:-------------------:|:-------------------:|:------------:|
-|  qsort() |         29525        |         4218        |         3730        |     2736     |
-|   fir()  |        162936        |         3436        |         2804        |     1767     |
-| matmul() |         73729        |         3837        |         3000        |     1957     |
+|   Task   | Latency w/o Hardware | Latency w/ Hardware | Hardware + Prefetch | Hardware + Prefetch + Compiler -O1 |   Speed Up   |
+|:--------:|:--------------------:|:-------------------:|:-------------------:|:----------------------------------:|:------------:|
+|  qsort() |         29525        |         4218        |         3730        |                 2736               |  X **10.8**  |
+|   fir()  |        162936        |         3436        |         2804        |                 1767               |  X **92.2**  |
+| matmul() |         73729        |         3837        |         3000        |                 1957               |  X **37.7**  |
