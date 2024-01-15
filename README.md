@@ -10,6 +10,10 @@ Contents:
 - ***lab-fir*** 
 - ***lab-exmem_fir*** 
 - ***lab-caravel_fir*** 
+- ***labi*** 
+- ***lab-wlos_baseline*** 
+- ***lab-sdram*** 
+- ***final_project*** 
 <br>
 
 
